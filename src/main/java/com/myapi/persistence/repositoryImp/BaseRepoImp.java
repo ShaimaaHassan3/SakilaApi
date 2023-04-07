@@ -1,8 +1,8 @@
 package com.myapi.persistence.repositoryImp;
 
+import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.repository.BaseRepo;
 import jakarta.persistence.*;
-import jakarta.servlet.http.HttpServletRequest;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -10,13 +10,13 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class BaseRepoImp implements BaseRepo<Table> {
+public class BaseRepoImp<Table> implements BaseRepo<Table> {
 
     private EntityManager entityManager;
     private Class<Table> type;
 
-    public BaseRepoImp(HttpServletRequest request) {
-        entityManager = (EntityManager) request.getAttribute("EntityManager");
+    public BaseRepoImp() {
+        entityManager = PersistenceManager.getInstance().getEntityManagerFactory().createEntityManager();
         //Detect class of Table
         Type genericSuperclass = getClass().getGenericSuperclass();
         ParameterizedType parameterizedType = (ParameterizedType) genericSuperclass;
