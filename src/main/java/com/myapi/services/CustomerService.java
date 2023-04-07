@@ -1,6 +1,7 @@
 package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
+import com.myapi.dtos.CustomerDto;
 import com.myapi.dtos.FilmDto;
 import com.myapi.persistence.entities.Film;
 import com.myapi.persistence.entities.Rental;
@@ -14,17 +15,19 @@ import java.util.Set;
 
 public class CustomerService {
     private ModelMapper modelMapper;
+    CustomerRepoImp customerRepo;
 
     public CustomerService() {
         modelMapper = new ModelMapper();
+        customerRepo = new CustomerRepoImp();
     }
 
     public Set<FilmDto> getRentalFilms(int customerID) {
-        CustomerRepoImp customerRepo = new CustomerRepoImp();
+
         Set<Rental> rentalSet = customerRepo.getRentalsOfCustomer(411);
         Set<FilmDto> films = new HashSet<>();
         for (Rental rental : rentalSet) {
-            films.add(modelMapper.map(rental.getInventory().getFilm(),FilmDto.class));
+            films.add(modelMapper.map(rental.getInventory().getFilm(), FilmDto.class));
         }
 //        Type type = new TypeToken<Set<Film>>() {
 //        }.getType();
@@ -32,5 +35,10 @@ public class CustomerService {
         return films;
     }
 
+    public Set<CustomerDto> getAllCustomer() {
+        Type type = new TypeToken<Set<CustomerDto>>() {
+        }.getType();
+        return modelMapper.map(customerRepo.getAllCustomers(), type);
+    }
 
 }
