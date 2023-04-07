@@ -30,4 +30,11 @@ public class CustomerServices {
         return customerService.getCustomerById(Id);
     }
 
+    public String newCustomer(CustomerDto customerDto) {
+        CustomerDto newCustomerDto = customerService.addCustomer(customerDto);
+        if (newCustomerDto != null)
+            return "Added Successfully";
+        return "Cant Add Customer";
+    }
+
 }

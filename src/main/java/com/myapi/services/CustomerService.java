@@ -3,6 +3,7 @@ package com.myapi.services;
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.CustomerDto;
 import com.myapi.dtos.FilmDto;
+import com.myapi.persistence.entities.Customer;
 import com.myapi.persistence.entities.Film;
 import com.myapi.persistence.entities.Rental;
 import com.myapi.persistence.repositoryImp.CustomerRepoImp;
@@ -43,6 +44,11 @@ public class CustomerService {
 
     public CustomerDto getCustomerById(int ID) {
         return modelMapper.map(customerRepo.getCustomerById(ID), CustomerDto.class);
+    }
+
+    public CustomerDto addCustomer(CustomerDto customerDto) {
+        Customer customer = modelMapper.map(customerDto, Customer.class);
+        return modelMapper.map(customerRepo.createCustomer(customer), CustomerDto.class);
     }
 
 }
