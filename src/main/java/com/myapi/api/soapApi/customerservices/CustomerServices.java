@@ -26,4 +26,8 @@ public class CustomerServices {
         return customerService.getAllCustomer();
     }
 
+    public CustomerDto getCustomer(int Id) {
+        return customerService.getCustomerById(Id);
+    }
+
 }

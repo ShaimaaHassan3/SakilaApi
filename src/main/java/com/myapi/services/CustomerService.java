@@ -41,4 +41,8 @@ public class CustomerService {
         return modelMapper.map(customerRepo.getAllCustomers(), type);
     }
 
+    public CustomerDto getCustomerById(int ID) {
+        return modelMapper.map(customerRepo.getCustomerById(ID), CustomerDto.class);
+    }
+
 }

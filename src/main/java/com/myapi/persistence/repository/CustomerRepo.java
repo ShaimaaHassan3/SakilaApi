@@ -12,5 +12,8 @@ public interface CustomerRepo {
     public Set<Customer> getAllCustomers();
     public Customer getCustomerById(int ID);
     public void deleteCustomer(Customer customer);
+    public Customer createCustomer(Customer customer);
+    public Customer updateCustomer (Customer customer);
+
 
 }

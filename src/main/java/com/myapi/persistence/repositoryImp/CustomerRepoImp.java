@@ -40,11 +40,23 @@ public class CustomerRepoImp extends BaseRepoImp<Customer> implements CustomerRe
 
     @Override
     public Customer getCustomerById(int ID) {
-        return null;
+
+        return getById(ID);
     }
 
     @Override
     public void deleteCustomer(Customer customer) {
+        delete(customer);
+    }
 
+    @Override
+    public Customer createCustomer(Customer customer) {
+        return save(customer);
+    }
+
+    @Override
+    public Customer updateCustomer(Customer customer) {
+        return update(customer);
     }
 }
+
