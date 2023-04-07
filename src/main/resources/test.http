@@ -1,0 +1,14 @@
+POST http://localhost:9090/SakilaApi/ws/customer HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://customerservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getAllRentalFilm>
+            <arg0>411</arg0>
+        </jets:getAllRentalFilm>
+    </soap:Body>
+</soap:Envelope>
