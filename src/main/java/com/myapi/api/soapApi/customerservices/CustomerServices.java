@@ -44,4 +44,8 @@ public class CustomerServices {
         return "Cant Update Customer";
     }
 
+    public void deleteCustomer(CustomerDto customerDto) {
+        customerService.deleteCustomer(customerDto);
+    }
+
 }
