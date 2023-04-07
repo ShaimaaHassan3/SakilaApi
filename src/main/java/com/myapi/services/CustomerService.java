@@ -51,4 +51,9 @@ public class CustomerService {
         return modelMapper.map(customerRepo.createCustomer(customer), CustomerDto.class);
     }
 
+    public CustomerDto updateCustomer(CustomerDto customerDto) {
+        Customer customer = modelMapper.map(customerDto, Customer.class);
+        return modelMapper.map(customerRepo.updateCustomer(customer), CustomerDto.class);
+    }
+
 }

@@ -37,4 +37,11 @@ public class CustomerServices {
         return "Cant Add Customer";
     }
 
+    public String updateCustomer(CustomerDto customerDto) {
+        CustomerDto newCustomerDto = customerService.updateCustomer(customerDto);
+        if (newCustomerDto != null)
+            return "Updated Successfully";
+        return "Cant Update Customer";
+    }
+
 }
