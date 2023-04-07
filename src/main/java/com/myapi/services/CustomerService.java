@@ -56,9 +56,10 @@ public class CustomerService {
         return modelMapper.map(customerRepo.updateCustomer(customer), CustomerDto.class);
     }
 
-    public void deleteCustomer(CustomerDto customerDto) {
-        Customer customer = modelMapper.map(customerDto, Customer.class);
-        customerRepo.deleteCustomer(customer);
+    public void deleteCustomer(int id) {
+        Customer customer2 = customerRepo.getCustomerById(id);
+//        Customer customer = modelMapper.map(customerDto, Customer.class);
+        customerRepo.deleteCustomer(customer2);
     }
 
 }
