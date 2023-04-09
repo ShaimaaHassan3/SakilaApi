@@ -56,6 +56,21 @@ public class FilmRepoImp extends BaseRepoImp<Film> implements FilmRepo {
         try {
             tx.begin();
             Film film = entityManager.find(Film.class, id);
+//            film.getFilmCategories().clear();
+//            film.getFilmActors().clear();
+            for (FilmActor actor : film.getFilmActors()) {
+                actor.setFilm(null);
+                entityManager.remove(actor);
+            }
+            for (FilmCategory category : film.getFilmCategories()) {
+                category.setFilm(null);
+                entityManager.remove(category);
+            }
+            for (Inventory inventory : film.getInventories()) {
+                inventory.setFilm(null);
+                entityManager.remove(inventory);
+            }
+            entityManager.refresh(film);
             entityManager.remove(film);
             tx.commit();
         } catch (Exception e) {
@@ -80,5 +95,13 @@ public class FilmRepoImp extends BaseRepoImp<Film> implements FilmRepo {
             throw e;
         }
         return film;
+    }
+
+    @Override
+    public Film getFilmByName(String title) {
+        Query query = entityManager.createQuery("SELECT f FROM Film f WHERE f.title LIKE  :title");
+        query.setParameter("title", "%" + title + "%");
+        List<Film> films = query.getResultList();
+        return films.isEmpty() ? null : films.get(0);
     }
 }

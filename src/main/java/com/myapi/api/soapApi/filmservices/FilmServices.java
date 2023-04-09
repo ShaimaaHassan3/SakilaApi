@@ -7,6 +7,7 @@ import com.myapi.services.FilmServicesIn;
 import jakarta.jws.WebService;
 import org.modelmapper.ModelMapper;
 
+import java.util.List;
 import java.util.Set;
 
 @WebService(name = "FilmWebServices")
@@ -36,5 +37,9 @@ public class FilmServices {
 
     public FilmDto updateFilm(FilmDto film) {
         return service.updateFilm(film);
+    }
+
+    public FilmDto getFilmByName(String title) {
+        return service.getFilmByName(title);
     }
 }

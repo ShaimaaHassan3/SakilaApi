@@ -11,4 +11,5 @@ public interface FilmRepo {
     public Film saveFilm(Film film);
     public void deleteFilm(int id);
     public Film updateFilm(Film film);
+    public Film getFilmByName(String Name);
 }

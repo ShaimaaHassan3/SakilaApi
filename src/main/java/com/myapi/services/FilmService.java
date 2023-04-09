@@ -8,6 +8,7 @@ import com.myapi.persistence.repositoryImp.FilmRepoImp;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;
+import java.util.List;
 import java.util.Set;
 
 public class FilmService implements FilmServicesIn {
@@ -40,5 +41,10 @@ public class FilmService implements FilmServicesIn {
 
     public FilmDto updateFilm(FilmDto film) {
         return modelMapper.map(service.updateFilm(modelMapper.map(film, Film.class)), FilmDto.class);
+    }
+    public FilmDto getFilmByName(String title) {
+//        Type type = new TypeToken<List<FilmDto>>() {
+//        }.getType();
+        return modelMapper.map(service.getFilmByName(title),FilmDto.class);
     }
 }
