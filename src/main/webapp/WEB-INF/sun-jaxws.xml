@@ -5,5 +5,9 @@
     name="CustomerService"
     implementation="com.myapi.api.soapApi.customerservices.CustomerServices"
     url-pattern="/ws/customer" />
+    <endpoint
+            name="FilmWebServices"
+            implementation="com.myapi.api.soapApi.filmservices.FilmServices"
+            url-pattern="/ws/film" />
     
 </endpoints>

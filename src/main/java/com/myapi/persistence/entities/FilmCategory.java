@@ -2,7 +2,7 @@ package com.myapi.persistence.entities;
 
 import jakarta.persistence.*;
 
-import java.time.Instant;
+import java.util.Date;
 
 @Entity
 @Table(name = "film_category")
@@ -21,7 +21,8 @@ public class FilmCategory {
     private Category category;
 
     @Column(name = "last_update", nullable = false)
-    private Instant lastUpdate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastUpdate;
 
     public FilmCategoryId getId() {
         return id;
@@ -47,12 +48,11 @@ public class FilmCategory {
         this.category = category;
     }
 
-    public Instant getLastUpdate() {
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Instant lastUpdate) {
+    public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
-
 }
