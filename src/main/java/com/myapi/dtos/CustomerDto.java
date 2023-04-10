@@ -29,4 +29,5 @@ public class CustomerDto implements Serializable {
     private Date createDate;
     private Date lastUpdate;
     private StoreDto storeDto;
+    private Set<PaymentDto> paymentDtos;
 }

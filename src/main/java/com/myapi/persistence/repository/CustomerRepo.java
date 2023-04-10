@@ -2,6 +2,7 @@ package com.myapi.persistence.repository;
 
 import com.myapi.dtos.CustomerDto;
 import com.myapi.persistence.entities.Customer;
+import com.myapi.persistence.entities.Payment;
 import com.myapi.persistence.entities.Rental;
 
 import java.util.Set;
@@ -14,6 +15,7 @@ public interface CustomerRepo {
     public void deleteCustomer(Customer customer);
     public Customer createCustomer(Customer customer);
     public Customer updateCustomer (Customer customer);
+    public Set<Payment> getAllPayment(int Id);
 
 
 }

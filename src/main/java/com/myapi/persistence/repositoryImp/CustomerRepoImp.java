@@ -68,5 +68,14 @@ public class CustomerRepoImp extends BaseRepoImp<Customer> implements CustomerRe
         return update(customer);
     }
 
+    @Override
+    public Set<Payment> getAllPayment(int CustomerID) {
+        String queryStr = "Select payments from Customer c where c.id =: CustomerID";
+        Query q = entityManager.createQuery(queryStr);
+        q.setParameter("CustomerID", CustomerID);
+//        Set<Rental> rentals = (Set<Rental>) q.getResultStream();
+        return (Set<Payment>) q.getResultStream().collect(Collectors.toSet());
+    }
+
 }
 
