@@ -1,9 +1,10 @@
 package com.myapi.persistence.repositoryImp;
 
 import com.myapi.persistence.PersistenceManager;
-import com.myapi.persistence.entities.Customer;
-import com.myapi.persistence.entities.Rental;
+import com.myapi.persistence.entities.*;
+import com.myapi.persistence.repository.AddressRepo;
 import com.myapi.persistence.repository.CustomerRepo;
+import com.myapi.persistence.repository.StoreRepo;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import jakarta.servlet.http.HttpServletRequest;
@@ -51,12 +52,21 @@ public class CustomerRepoImp extends BaseRepoImp<Customer> implements CustomerRe
 
     @Override
     public Customer createCustomer(Customer customer) {
-        return save(customer);
+        AddressRepo addressRepo = new AddressRepoImp();
+        StoreRepo storeRepo = new StoreRepoImp();
+        customer.setAddress(addressRepo.getAddressById(customer.getAddress().getId()));
+        customer.setStore(storeRepo.getStoreById(customer.getStore().getId()));
+        return update(customer);
     }
 
     @Override
     public Customer updateCustomer(Customer customer) {
+        AddressRepo addressRepo = new AddressRepoImp();
+        StoreRepo storeRepo = new StoreRepoImp();
+        customer.setAddress(addressRepo.getAddressById(customer.getAddress().getId()));
+        customer.setStore(storeRepo.getStoreById(customer.getStore().getId()));
         return update(customer);
     }
+
 }
 

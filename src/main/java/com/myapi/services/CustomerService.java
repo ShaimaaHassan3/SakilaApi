@@ -19,8 +19,8 @@ public class CustomerService {
     CustomerRepoImp customerRepo;
 
     public CustomerService() {
-        modelMapper = new ModelMapper();
         customerRepo = new CustomerRepoImp();
+        modelMapper = new ModelMapper();
     }
 
     public Set<FilmDto> getRentalFilms(int customerID) {

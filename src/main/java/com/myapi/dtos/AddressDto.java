@@ -4,23 +4,25 @@ import com.myapi.dtos.CityDto;
 import com.myapi.dtos.StoreDto;
 import com.myapi.persistence.entities.Address;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 import java.util.Set;
 
 /**
  * A DTO for the {@link Address} entity
  */
 @Data
+@NoArgsConstructor
 public class AddressDto implements Serializable {
-    private final Integer id;
-    private final String address;
-    private final String address2;
-    private final String district;
-    private final CityDto city;
-    private final String postalCode;
-    private final String phone;
-    private final Instant lastUpdate;
-    private final Set<StoreDto> stores;
+    private  Integer id;
+    private  String address;
+    private  String address2;
+    private  String district;
+    private  CityDto city;
+    private  String postalCode;
+    private  String phone;
+    private Date lastUpdate;
 }

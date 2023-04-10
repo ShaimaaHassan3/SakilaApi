@@ -1,10 +1,14 @@
 package com.myapi.api.soapApi.customerservices;
 
+import com.myapi.dtos.AddressDto;
 import com.myapi.dtos.CustomerDto;
 import com.myapi.dtos.FilmDto;
+import com.myapi.persistence.entities.Customer;
 import com.myapi.persistence.entities.Film;
+import com.myapi.persistence.repositoryImp.BaseRepoImp;
 import com.myapi.services.CustomerService;
 import jakarta.jws.WebService;
+import org.modelmapper.ModelMapper;
 
 import java.util.Set;
 
@@ -31,7 +35,8 @@ public class CustomerServices {
     }
 
     public String newCustomer(CustomerDto customerDto) {
-        CustomerDto newCustomerDto = customerService.addCustomer(customerDto);
+        System.out.println("New Customer : " + customerDto);
+       CustomerDto newCustomerDto = customerService.addCustomer(customerDto);
         if (newCustomerDto != null)
             return "Added Successfully";
         return "Cant Add Customer";
