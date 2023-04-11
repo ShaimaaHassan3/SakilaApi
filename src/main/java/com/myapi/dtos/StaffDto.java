@@ -4,24 +4,26 @@ import com.myapi.dtos.AddressDto;
 import com.myapi.dtos.StoreDto;
 import com.myapi.persistence.entities.Staff;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.time.Instant;
+import java.util.Date;
 
 /**
  * A DTO for the {@link Staff} entity
  */
 @Data
+@NoArgsConstructor
 public class StaffDto implements Serializable {
-    private final Short id;
-    private final String firstName;
-    private final String lastName;
-    private final AddressDto address;
-    private final byte[] picture;
-    private final String email;
-    private final StoreDto store;
-    private final Boolean active;
-    private final String username;
-    private final String password;
-    private final Instant lastUpdate;
+    private  Short id;
+    private  String firstName;
+    private  String lastName;
+    private  AddressDto address;
+    private  byte[] picture;
+    private  String email;
+    private  Boolean active;
+    private  String username;
+    private  String password;
+    private Date lastUpdate;
 }

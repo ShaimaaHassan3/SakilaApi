@@ -1,13 +1,15 @@
 package com.myapi.persistence.entities;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 
-import java.time.Instant;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "store")
+@NoArgsConstructor
 public class Store {
     @Id
     @Column(name = "store_id", columnDefinition = "TINYINT UNSIGNED not null")
@@ -22,7 +24,8 @@ public class Store {
     private Address address;
 
     @Column(name = "last_update", nullable = false)
-    private Instant lastUpdate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastUpdate;
 
     @OneToMany(mappedBy = "store")
     private Set<Inventory> inventories = new LinkedHashSet<>();
@@ -57,11 +60,11 @@ public class Store {
         this.address = address;
     }
 
-    public Instant getLastUpdate() {
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Instant lastUpdate) {
+    public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 
