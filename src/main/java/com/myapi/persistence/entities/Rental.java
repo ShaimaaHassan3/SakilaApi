@@ -2,7 +2,7 @@ package com.myapi.persistence.entities;
 
 import jakarta.persistence.*;
 
-import java.time.Instant;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -15,7 +15,8 @@ public class Rental {
     private Integer id;
 
     @Column(name = "rental_date", nullable = false)
-    private Instant rentalDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date rentalDate;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "inventory_id", nullable = false)
@@ -26,14 +27,16 @@ public class Rental {
     private Customer customer;
 
     @Column(name = "return_date")
-    private Instant returnDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date returnDate;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "staff_id", nullable = false)
     private Staff staff;
 
     @Column(name = "last_update", nullable = false)
-    private Instant lastUpdate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastUpdate;
 
     @OneToMany(mappedBy = "rental")
     private Set<Payment> payments = new LinkedHashSet<>();
@@ -46,13 +49,7 @@ public class Rental {
         this.id = id;
     }
 
-    public Instant getRentalDate() {
-        return rentalDate;
-    }
 
-    public void setRentalDate(Instant rentalDate) {
-        this.rentalDate = rentalDate;
-    }
 
     public Inventory getInventory() {
         return inventory;
@@ -70,12 +67,28 @@ public class Rental {
         this.customer = customer;
     }
 
-    public Instant getReturnDate() {
+    public Date getRentalDate() {
+        return rentalDate;
+    }
+
+    public void setRentalDate(Date rentalDate) {
+        this.rentalDate = rentalDate;
+    }
+
+    public Date getReturnDate() {
         return returnDate;
     }
 
-    public void setReturnDate(Instant returnDate) {
+    public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
+    }
+
+    public Date getLastUpdate() {
+        return lastUpdate;
+    }
+
+    public void setLastUpdate(Date lastUpdate) {
+        this.lastUpdate = lastUpdate;
     }
 
     public Staff getStaff() {
@@ -86,13 +99,7 @@ public class Rental {
         this.staff = staff;
     }
 
-    public Instant getLastUpdate() {
-        return lastUpdate;
-    }
 
-    public void setLastUpdate(Instant lastUpdate) {
-        this.lastUpdate = lastUpdate;
-    }
 
     public Set<Payment> getPayments() {
         return payments;

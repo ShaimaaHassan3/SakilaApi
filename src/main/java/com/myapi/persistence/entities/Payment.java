@@ -3,7 +3,7 @@ package com.myapi.persistence.entities;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;
-import java.time.Instant;
+import java.util.Date;
 
 @Entity
 @Table(name = "payment")
@@ -29,10 +29,12 @@ public class Payment {
     private BigDecimal amount;
 
     @Column(name = "payment_date", nullable = false)
-    private Instant paymentDate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date paymentDate;
 
     @Column(name = "last_update")
-    private Instant lastUpdate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastUpdate;
 
     public Integer getId() {
         return id;
@@ -74,20 +76,19 @@ public class Payment {
         this.amount = amount;
     }
 
-    public Instant getPaymentDate() {
+    public Date getPaymentDate() {
         return paymentDate;
     }
 
-    public void setPaymentDate(Instant paymentDate) {
+    public void setPaymentDate(Date paymentDate) {
         this.paymentDate = paymentDate;
     }
 
-    public Instant getLastUpdate() {
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Instant lastUpdate) {
+    public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
-
 }

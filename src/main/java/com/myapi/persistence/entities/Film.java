@@ -1,14 +1,16 @@
 package com.myapi.persistence.entities;
 
 import jakarta.persistence.*;
+import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
-import java.time.Instant;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Entity
 @Table(name = "film")
+@NoArgsConstructor
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -52,7 +54,8 @@ public class Film {
     private String specialFeatures;
 
     @Column(name = "last_update", nullable = false)
-    private Instant lastUpdate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastUpdate;
 
     @OneToMany(mappedBy = "film")
     private Set<Inventory> inventories = new LinkedHashSet<>();
@@ -159,11 +162,11 @@ public class Film {
         this.specialFeatures = specialFeatures;
     }
 
-    public Instant getLastUpdate() {
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Instant lastUpdate) {
+    public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 
