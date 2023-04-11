@@ -20,7 +20,7 @@ public class StaffDto implements Serializable {
     private  String firstName;
     private  String lastName;
     private  AddressDto address;
-    private  byte[] picture;
+//    private  byte[] picture;
     private  String email;
     private  Boolean active;
     private  String username;

@@ -2,9 +2,10 @@ package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.ActorDto;
+import com.myapi.dtos.CategoryDto;
 import com.myapi.dtos.FilmDto;
-import com.myapi.persistence.entities.Film;
-import com.myapi.persistence.entities.FilmActor;
+import com.myapi.dtos.StoreDto;
+import com.myapi.persistence.entities.*;
 import com.myapi.persistence.repository.ActorRepo;
 import com.myapi.persistence.repositoryImp.ActorRepoImp;
 import com.myapi.persistence.repositoryImp.FilmRepoImp;
@@ -59,5 +60,32 @@ public class FilmService implements FilmServicesIn {
         for (FilmActor filmActor : film.getFilmActors())
             actorDtos.add(modelMapper.map(filmActor.getActor(), ActorDto.class));
         return actorDtos;
+    }
+
+    public Set<FilmDto> getAllFilmsReleaseYear(Integer ReleaseYear) {
+        Type type = new TypeToken<Set<FilmDto>>() {
+        }.getType();
+        return modelMapper.map(service.getAllFimInReleaseYear(ReleaseYear), type);
+    }
+
+    public Set<FilmDto> getAllFilmsLanguage(String languageName) {
+        Type type = new TypeToken<Set<FilmDto>>() {
+        }.getType();
+        return modelMapper.map(service.getAllFilmsWithLanguage(languageName), type);
+    }
+
+    public Set<CategoryDto> getAllFilmCategories(int filmId) {
+        Film film = service.getFilmById(filmId);
+        Set<CategoryDto> actorDtos = new HashSet<>();
+        for (FilmCategory categoryDto : film.getFilmCategories())
+            actorDtos.add(modelMapper.map(categoryDto.getCategory(), CategoryDto.class));
+        return actorDtos;
+    }
+    public Set<StoreDto> getAllFilmStories(int filmId) {
+        Film film = service.getFilmById(filmId);
+        Set<StoreDto> storeDtos = new HashSet<>();
+        for (Inventory inventory : film.getInventories())
+            storeDtos.add(modelMapper.map(inventory.getStore(), StoreDto.class));
+        return storeDtos;
     }
 }
