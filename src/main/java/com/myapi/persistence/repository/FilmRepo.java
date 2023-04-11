@@ -15,5 +15,6 @@ public interface FilmRepo {
     public Film getFilmByName(String Name);
     public Set<FilmActor> getAllFilmActorsByFilm(int filmId);
     public Set<Film> getAllFimInReleaseYear(Integer ReleaseYear);
+    public Set<Film> getAllFilmsWithLanguage(String languageName);
 }
 

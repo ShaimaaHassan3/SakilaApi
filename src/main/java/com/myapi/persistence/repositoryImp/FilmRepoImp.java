@@ -129,4 +129,13 @@ public class FilmRepoImp extends BaseRepoImp<Film> implements FilmRepo {
         return (Set<Film>) query.getResultStream().collect(Collectors.toSet());
     }
 
+    @Override
+    public Set<Film> getAllFilmsWithLanguage(String languageName) {
+        System.out.println("Language Name " + languageName);
+        String quaryString = "SELECT f FROM Film f JOIN f.language l WHERE l.name = :languageName";
+        Query query = entityManager.createQuery(quaryString);
+        query.setParameter("languageName", languageName.trim());
+        return (Set<Film>) query.getResultStream().collect(Collectors.toSet());
+    }
+
 }

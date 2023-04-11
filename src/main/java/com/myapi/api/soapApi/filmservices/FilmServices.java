@@ -2,7 +2,9 @@ package com.myapi.api.soapApi.filmservices;
 
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.ActorDto;
+import com.myapi.dtos.CategoryDto;
 import com.myapi.dtos.FilmDto;
+import com.myapi.dtos.StoreDto;
 import com.myapi.persistence.entities.FilmActor;
 import com.myapi.persistence.repositoryImp.ProxyFilmService;
 import com.myapi.services.FilmService;
@@ -53,5 +55,17 @@ public class FilmServices {
 
     public Set<FilmDto> getAllFilmsReleaseYear(Integer ReleaseYear) {
         return service.getAllFilmsReleaseYear(ReleaseYear);
+    }
+
+    public Set<FilmDto> getAllFilmsLanguage(String languageName) {
+        return service.getAllFilmsLanguage(languageName);
+    }
+
+    public Set<CategoryDto> getAllFilmCategories(int filmId) {
+        return service.getAllFilmCategories(filmId);
+    }
+
+    public Set<StoreDto> getAllFilmStories(int filmId) {
+        return service.getAllFilmStories(filmId);
     }
 }
