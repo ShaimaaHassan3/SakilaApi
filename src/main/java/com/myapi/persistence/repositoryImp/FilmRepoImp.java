@@ -104,4 +104,21 @@ public class FilmRepoImp extends BaseRepoImp<Film> implements FilmRepo {
         List<Film> films = query.getResultList();
         return films.isEmpty() ? null : films.get(0);
     }
+
+    @Override
+    public Set<FilmActor> getAllFilmActorsByFilm(int filmId) {
+        try {
+            entityManager.getTransaction().begin();
+            TypedQuery<FilmActor> query = entityManager.createQuery(
+                    "SELECT filmActors FROM Film film WHERE film.id = :filmId", FilmActor.class);
+            query.setParameter("filmId", filmId);
+            Set<FilmActor> filmActors = (Set<FilmActor>) query.getResultStream().collect(Collectors.toSet());
+            entityManager.getTransaction().commit();
+            return filmActors;
+        } catch (Exception e) {
+            entityManager.getTransaction().rollback();
+            throw e;
+        }
+    }
+
 }

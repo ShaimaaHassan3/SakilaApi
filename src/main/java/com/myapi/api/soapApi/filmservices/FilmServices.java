@@ -1,12 +1,16 @@
 package com.myapi.api.soapApi.filmservices;
 
+import com.google.gson.reflect.TypeToken;
+import com.myapi.dtos.ActorDto;
 import com.myapi.dtos.FilmDto;
+import com.myapi.persistence.entities.FilmActor;
 import com.myapi.persistence.repositoryImp.ProxyFilmService;
 import com.myapi.services.FilmService;
 import com.myapi.services.FilmServicesIn;
 import jakarta.jws.WebService;
 import org.modelmapper.ModelMapper;
 
+import java.lang.reflect.Type;
 import java.util.List;
 import java.util.Set;
 
@@ -41,5 +45,8 @@ public class FilmServices {
 
     public FilmDto getFilmByName(String title) {
         return service.getFilmByName(title);
+    }
+    public Set<ActorDto> getAllFilmActorsByFilm(int filmId) {
+        return service.getAllFilmActorsByFilm(filmId);
     }
 }
