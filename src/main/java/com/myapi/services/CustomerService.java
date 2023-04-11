@@ -3,8 +3,10 @@ package com.myapi.services;
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.CustomerDto;
 import com.myapi.dtos.FilmDto;
+import com.myapi.dtos.PaymentDto;
 import com.myapi.persistence.entities.Customer;
 import com.myapi.persistence.entities.Film;
+import com.myapi.persistence.entities.Payment;
 import com.myapi.persistence.entities.Rental;
 import com.myapi.persistence.repositoryImp.CustomerRepoImp;
 import org.modelmapper.ModelMapper;
@@ -19,8 +21,8 @@ public class CustomerService {
     CustomerRepoImp customerRepo;
 
     public CustomerService() {
-        modelMapper = new ModelMapper();
         customerRepo = new CustomerRepoImp();
+        modelMapper = new ModelMapper();
     }
 
     public Set<FilmDto> getRentalFilms(int customerID) {
@@ -60,6 +62,12 @@ public class CustomerService {
         Customer customer2 = customerRepo.getCustomerById(id);
 //        Customer customer = modelMapper.map(customerDto, Customer.class);
         customerRepo.deleteCustomer(customer2);
+    }
+
+    public Set<PaymentDto> getAllPayments(int customerId) {
+        Type type = new TypeToken<Set<PaymentDto>>() {
+        }.getType();
+        return modelMapper.map(customerRepo.getAllPayment(customerId),type);
     }
 
 }

@@ -1,11 +1,18 @@
 package com.myapi.api.soapApi.customerservices;
 
+import com.google.gson.reflect.TypeToken;
+import com.myapi.dtos.AddressDto;
 import com.myapi.dtos.CustomerDto;
 import com.myapi.dtos.FilmDto;
+import com.myapi.dtos.PaymentDto;
+import com.myapi.persistence.entities.Customer;
 import com.myapi.persistence.entities.Film;
+import com.myapi.persistence.repositoryImp.BaseRepoImp;
 import com.myapi.services.CustomerService;
 import jakarta.jws.WebService;
+import org.modelmapper.ModelMapper;
 
+import java.lang.reflect.Type;
 import java.util.Set;
 
 @WebService(name = "CustomerWebServices")
@@ -31,6 +38,7 @@ public class CustomerServices {
     }
 
     public String newCustomer(CustomerDto customerDto) {
+        System.out.println("New Customer : " + customerDto);
         CustomerDto newCustomerDto = customerService.addCustomer(customerDto);
         if (newCustomerDto != null)
             return "Added Successfully";
@@ -48,4 +56,7 @@ public class CustomerServices {
         customerService.deleteCustomer(id);
     }
 
+    public Set<PaymentDto> getAllPayments(int customerId) {
+        return customerService.getAllPayments(customerId);
+    }
 }

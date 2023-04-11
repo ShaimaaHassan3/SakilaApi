@@ -1,8 +1,10 @@
 package com.myapi.persistence.entities;
 
 import jakarta.persistence.*;
+import jakarta.xml.bind.annotation.XmlTransient;
 
 import java.time.Instant;
+import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -21,8 +23,10 @@ public class Actor {
     private String lastName;
 
     @Column(name = "last_update", nullable = false)
-    private Instant lastUpdate;
+    @Temporal(TemporalType.TIMESTAMP)
+    private Date lastUpdate;
 
+    @XmlTransient
     @OneToMany(mappedBy = "actor")
     private Set<FilmActor> filmActors = new LinkedHashSet<>();
 
@@ -50,11 +54,11 @@ public class Actor {
         this.lastName = lastName;
     }
 
-    public Instant getLastUpdate() {
+    public Date getLastUpdate() {
         return lastUpdate;
     }
 
-    public void setLastUpdate(Instant lastUpdate) {
+    public void setLastUpdate(Date lastUpdate) {
         this.lastUpdate = lastUpdate;
     }
 
