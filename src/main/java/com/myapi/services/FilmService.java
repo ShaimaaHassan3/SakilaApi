@@ -60,4 +60,10 @@ public class FilmService implements FilmServicesIn {
             actorDtos.add(modelMapper.map(filmActor.getActor(), ActorDto.class));
         return actorDtos;
     }
+
+    public Set<FilmDto> getAllFilmsReleaseYear(Integer ReleaseYear) {
+        Type type = new TypeToken<Set<FilmDto>>() {
+        }.getType();
+        return modelMapper.map(service.getAllFimInReleaseYear(ReleaseYear),type);
+    }
 }

@@ -46,7 +46,12 @@ public class FilmServices {
     public FilmDto getFilmByName(String title) {
         return service.getFilmByName(title);
     }
+
     public Set<ActorDto> getAllFilmActorsByFilm(int filmId) {
         return service.getAllFilmActorsByFilm(filmId);
+    }
+
+    public Set<FilmDto> getAllFilmsReleaseYear(Integer ReleaseYear) {
+        return service.getAllFilmsReleaseYear(ReleaseYear);
     }
 }

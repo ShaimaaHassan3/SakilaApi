@@ -121,4 +121,12 @@ public class FilmRepoImp extends BaseRepoImp<Film> implements FilmRepo {
         }
     }
 
+    @Override
+    public Set<Film> getAllFimInReleaseYear(Integer ReleaseYear) {
+        String quaryString = "From Film f where f.releaseYear = :ReleaseYear";
+        Query query = entityManager.createQuery(quaryString);
+        query.setParameter("ReleaseYear", ReleaseYear);
+        return (Set<Film>) query.getResultStream().collect(Collectors.toSet());
+    }
+
 }
