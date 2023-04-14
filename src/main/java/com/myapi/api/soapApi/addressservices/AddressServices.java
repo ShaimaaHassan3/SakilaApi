@@ -17,4 +17,8 @@ public class AddressServices {
     public Set<AddressDto> getAllAddress() {
         return addressService.getAllAddresses();
     }
+
+    public AddressDto getAddressById(int ID) {
+        return addressService.getAddressById(ID);
+    }
 }

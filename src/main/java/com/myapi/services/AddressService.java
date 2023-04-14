@@ -24,4 +24,7 @@ public class AddressService {
         }.getType();
         return modelMapper.map(addressRepo.getAllAddresses(), type);
     }
+    public AddressDto getAddressById (int ID) {
+        return modelMapper.map(addressRepo.getAddressById(ID) , AddressDto.class);
+    }
 }
