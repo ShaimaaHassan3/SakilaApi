@@ -25,9 +25,12 @@ public class AddressServices {
         return addressService.getAddressById(ID);
     }
 
-//    public AddressDto NewAddress(AddressDto addressDto) {
-//        return addressService.addNewAddress(addressDto);
-//    }
+    public AddressDto NewAddress(AddressDto addressDto) {
+        return addressService.addNewAddress(addressDto);
+    }
+    public AddressDto updateAddress(AddressDto addressDto) {
+        return addressService.updateAddress(addressDto);
+    }
 
     public Set<StoreDto> getAllStoriesInAddress(int ID) {
         return addressService.getAllStoriesInAddress(ID);

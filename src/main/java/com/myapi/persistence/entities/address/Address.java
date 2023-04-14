@@ -147,9 +147,14 @@ public class Address {
     public void setLocation(byte[] location) {
         this.location = location;
     }
-
-    public Geometry getLocation() throws Exception {
-        WKBReader reader = new WKBReader();
-        return reader.read(location);
+    public byte[] getLocation() {
+        return location;
     }
+
+//    public Geometry getLocationGeometry() throws Exception {
+//        WKBReader reader = new WKBReader();
+//        return reader.read(location);
+//    }
+
+
 }

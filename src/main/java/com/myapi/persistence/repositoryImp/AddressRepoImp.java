@@ -34,11 +34,6 @@ public class AddressRepoImp extends BaseRepoImp<Address> implements AddressRepo 
         CityRepo cityRepo = new CityRepoImp();
         City city = cityRepo.getCityById(address.getCity().getId());
         address.setCity(city);
-        GeometryFactory geometryFactory = new GeometryFactory();
-        Point point = geometryFactory.createPoint(new Coordinate(1, 3));
-        WKBWriter wkbWriter = new WKBWriter();
-        byte[] locationBytes = wkbWriter.write(point);
-        address.setLocation(locationBytes);
         return update(address);
     }
 
