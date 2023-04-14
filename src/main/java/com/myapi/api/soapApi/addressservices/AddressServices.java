@@ -1,5 +1,6 @@
 package com.myapi.api.soapApi.addressservices;
 
+import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.StoreDto;
 import com.myapi.dtos.address.AddressDto;
 import com.myapi.dtos.customer.CustomerDto;
@@ -34,5 +35,9 @@ public class AddressServices {
 
     public Set<CustomerDto> getAllCustomersInAddress(int ID) {
         return addressService.getAllCustomerInAddress(ID);
+    }
+
+    public Set<StaffDto> getAllStaffInAddress(int ID) {
+        return addressService.getAllStaffInAddress(ID);
     }
 }
