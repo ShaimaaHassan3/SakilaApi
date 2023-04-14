@@ -1,4 +1,4 @@
-package com.myapi.dtos;
+package com.myapi.dtos.address;
 
 import com.myapi.persistence.entities.address.City;
 import lombok.Data;

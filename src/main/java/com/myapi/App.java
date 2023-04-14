@@ -1,7 +1,7 @@
 package com.myapi;
 
 import com.myapi.api.soapApi.filmservices.FilmServices;
-import com.myapi.dtos.FilmDto;
+import com.myapi.dtos.film.FilmDto;
 
 public class App {
     public static void main(String[] args) {

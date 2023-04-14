@@ -1,4 +1,4 @@
-package com.myapi.dtos;
+package com.myapi.dtos.address;
 
 import com.myapi.persistence.entities.address.Address;
 import lombok.Data;
@@ -17,7 +17,7 @@ public class AddressDto implements Serializable {
     private  String address;
     private  String address2;
     private  String district;
-    private  CityDto city;
+    private CityDto city;
     private  String postalCode;
     private  String phone;
     private Date lastUpdate;

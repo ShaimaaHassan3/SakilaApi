@@ -1,4 +1,4 @@
-package com.myapi.dtos;
+package com.myapi.dtos.film;
 
 import com.myapi.persistence.entities.film.Film;
 import lombok.Data;

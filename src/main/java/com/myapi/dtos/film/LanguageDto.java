@@ -1,14 +1,14 @@
-package com.myapi.dtos;
+package com.myapi.dtos.film;
 
+import com.myapi.persistence.entities.film.Language;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
 
 /**
- * A DTO for the {@link com.myapi.persistence.entities.Language} entity
+ * A DTO for the {@link Language} entity
  */
 @Data
 @NoArgsConstructor

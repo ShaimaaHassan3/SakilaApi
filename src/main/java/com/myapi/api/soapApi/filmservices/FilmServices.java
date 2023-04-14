@@ -1,8 +1,8 @@
 package com.myapi.api.soapApi.filmservices;
 
 import com.myapi.dtos.ActorDto;
-import com.myapi.dtos.CategoryDto;
-import com.myapi.dtos.FilmDto;
+import com.myapi.dtos.film.CategoryDto;
+import com.myapi.dtos.film.FilmDto;
 import com.myapi.dtos.StoreDto;
 import com.myapi.services.film.ProxyFilmService;
 import com.myapi.services.film.FilmService;

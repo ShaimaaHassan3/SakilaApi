@@ -1,6 +1,6 @@
 package com.myapi.services.film;
 
-import com.myapi.dtos.FilmDto;
+import com.myapi.dtos.film.FilmDto;
 
 import java.util.Set;
 

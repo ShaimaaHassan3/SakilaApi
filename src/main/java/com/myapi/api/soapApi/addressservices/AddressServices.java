@@ -1,6 +1,7 @@
 package com.myapi.api.soapApi.addressservices;
 
-import com.myapi.dtos.AddressDto;
+import com.myapi.dtos.StoreDto;
+import com.myapi.dtos.address.AddressDto;
 import com.myapi.services.AddressService;
 import jakarta.jws.WebService;
 
@@ -20,5 +21,13 @@ public class AddressServices {
 
     public AddressDto getAddressById(int ID) {
         return addressService.getAddressById(ID);
+    }
+
+//    public AddressDto NewAddress(AddressDto addressDto) {
+//        return addressService.addNewAddress(addressDto);
+//    }
+
+    public Set<StoreDto> getAllStoriesInAddress(int ID) {
+        return addressService.getAllStoriesInAddress(ID);
     }
 }

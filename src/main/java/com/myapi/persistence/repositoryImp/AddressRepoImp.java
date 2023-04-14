@@ -1,7 +1,13 @@
 package com.myapi.persistence.repositoryImp;
 
 import com.myapi.persistence.entities.address.Address;
+import com.myapi.persistence.entities.address.City;
 import com.myapi.persistence.repository.AddressRepo;
+import com.myapi.persistence.repository.CityRepo;
+import org.locationtech.jts.geom.Coordinate;
+import org.locationtech.jts.geom.GeometryFactory;
+import org.locationtech.jts.geom.Point;
+import org.locationtech.jts.io.WKBWriter;
 
 import java.util.Set;
 
@@ -25,13 +31,25 @@ public class AddressRepoImp extends BaseRepoImp<Address> implements AddressRepo 
 
     @Override
     public Address createAddress(Address address) {
-        return save(address);
+        CityRepo cityRepo = new CityRepoImp();
+        City city = cityRepo.getCityById(address.getCity().getId());
+        address.setCity(city);
+        GeometryFactory geometryFactory = new GeometryFactory();
+        Point point = geometryFactory.createPoint(new Coordinate(1, 3));
+        WKBWriter wkbWriter = new WKBWriter();
+        byte[] locationBytes = wkbWriter.write(point);
+        address.setLocation(locationBytes);
+        return update(address);
     }
 
     @Override
     public Address updateAddress(Address address) {
+        CityRepo cityRepo = new CityRepoImp();
+        City city = cityRepo.getCityById(address.getCity().getId());
+        address.setCity(city);
         return update(address);
     }
+
 }
 
 
