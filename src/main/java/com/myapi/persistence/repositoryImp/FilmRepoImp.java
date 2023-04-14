@@ -2,6 +2,9 @@ package com.myapi.persistence.repositoryImp;
 
 import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.*;
+import com.myapi.persistence.entities.film.Film;
+import com.myapi.persistence.entities.film.FilmActor;
+import com.myapi.persistence.entities.film.FilmCategory;
 import com.myapi.persistence.repository.FilmRepo;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
@@ -119,6 +122,23 @@ public class FilmRepoImp extends BaseRepoImp<Film> implements FilmRepo {
             entityManager.getTransaction().rollback();
             throw e;
         }
+    }
+
+    @Override
+    public Set<Film> getAllFimInReleaseYear(Integer ReleaseYear) {
+        String quaryString = "From Film f where f.releaseYear = :ReleaseYear";
+        Query query = entityManager.createQuery(quaryString);
+        query.setParameter("ReleaseYear", ReleaseYear);
+        return (Set<Film>) query.getResultStream().collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Film> getAllFilmsWithLanguage(String languageName) {
+        System.out.println("Language Name " + languageName);
+        String quaryString = "SELECT f FROM Film f JOIN f.language l WHERE l.name = :languageName";
+        Query query = entityManager.createQuery(quaryString);
+        query.setParameter("languageName", languageName.trim());
+        return (Set<Film>) query.getResultStream().collect(Collectors.toSet());
     }
 
 }

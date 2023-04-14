@@ -1,5 +1,7 @@
 package com.myapi.persistence.entities;
 
+import com.myapi.persistence.entities.customer.Rental;
+import com.myapi.persistence.entities.film.Film;
 import jakarta.persistence.*;
 
 import java.util.Date;

@@ -1,0 +1,72 @@
+### Address
+### getAllAddress
+POST http://localhost:9090/SakilaApi/ws/address HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://addressservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getAllAddress>
+        </jets:getAllAddress>
+    </soap:Body>
+</soap:Envelope>
+### getAddressById
+POST http://localhost:9090/SakilaApi/ws/address HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://addressservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getAddressById>
+        <arg0>7</arg0>
+        </jets:getAddressById>
+    </soap:Body>
+</soap:Envelope>
+### NewAddress
+POST http://localhost:9090/SakilaApi/ws/address HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://addressservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:NewAddress>
+        <arg0>
+         <address>692 Joliet Street</address>
+        <address2></address2>
+        <city>
+          <id>3</id>
+          <lastUpdate>2006-02-15T04:45:25+02:00</lastUpdate>
+        </city>
+        <district>Cairo</district>
+        <lastUpdate>2014-09-25T22:31:07+03:00</lastUpdate>
+        <phone>448477190408</phone>
+        <postalCode>83579</postalCode>
+        </arg0>
+        </jets:NewAddress>
+    </soap:Body>
+</soap:Envelope>
+### getAllStoriesInAddress
+POST http://localhost:9090/SakilaApi/ws/address HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://addressservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getAllStoriesInAddress>
+        <arg0>1</arg0>
+        </jets:getAllStoriesInAddress>
+    </soap:Body>
+</soap:Envelope>
+

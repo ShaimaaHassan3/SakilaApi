@@ -1,9 +1,8 @@
 package com.myapi.persistence.repository;
 
-import com.myapi.persistence.entities.Film;
-import com.myapi.persistence.entities.FilmActor;
+import com.myapi.persistence.entities.film.Film;
+import com.myapi.persistence.entities.film.FilmActor;
 
-import java.util.List;
 import java.util.Set;
 
 public interface FilmRepo {
@@ -14,5 +13,7 @@ public interface FilmRepo {
     public Film updateFilm(Film film);
     public Film getFilmByName(String Name);
     public Set<FilmActor> getAllFilmActorsByFilm(int filmId);
+    public Set<Film> getAllFimInReleaseYear(Integer ReleaseYear);
+    public Set<Film> getAllFilmsWithLanguage(String languageName);
 }
 

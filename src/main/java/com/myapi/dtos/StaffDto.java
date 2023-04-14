@@ -1,13 +1,11 @@
 package com.myapi.dtos;
 
-import com.myapi.dtos.AddressDto;
-import com.myapi.dtos.StoreDto;
+import com.myapi.dtos.address.AddressDto;
 import com.myapi.persistence.entities.Staff;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -20,7 +18,7 @@ public class StaffDto implements Serializable {
     private  String firstName;
     private  String lastName;
     private  AddressDto address;
-    private  byte[] picture;
+//    private  byte[] picture;
     private  String email;
     private  Boolean active;
     private  String username;

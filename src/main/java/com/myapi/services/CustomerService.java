@@ -1,18 +1,15 @@
 package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
-import com.myapi.dtos.CustomerDto;
-import com.myapi.dtos.FilmDto;
-import com.myapi.dtos.PaymentDto;
-import com.myapi.persistence.entities.Customer;
-import com.myapi.persistence.entities.Film;
-import com.myapi.persistence.entities.Payment;
-import com.myapi.persistence.entities.Rental;
+import com.myapi.dtos.customer.CustomerDto;
+import com.myapi.dtos.film.FilmDto;
+import com.myapi.dtos.customer.PaymentDto;
+import com.myapi.persistence.entities.customer.Customer;
+import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.repositoryImp.CustomerRepoImp;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 

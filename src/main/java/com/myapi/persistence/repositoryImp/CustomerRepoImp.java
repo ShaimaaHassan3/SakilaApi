@@ -1,15 +1,15 @@
 package com.myapi.persistence.repositoryImp;
 
 import com.myapi.persistence.PersistenceManager;
-import com.myapi.persistence.entities.*;
+import com.myapi.persistence.entities.customer.Customer;
+import com.myapi.persistence.entities.customer.Payment;
+import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.repository.AddressRepo;
 import com.myapi.persistence.repository.CustomerRepo;
 import com.myapi.persistence.repository.StoreRepo;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
-import jakarta.servlet.http.HttpServletRequest;
 
-import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 

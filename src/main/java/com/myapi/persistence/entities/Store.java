@@ -1,5 +1,7 @@
 package com.myapi.persistence.entities;
 
+import com.myapi.persistence.entities.address.Address;
+import com.myapi.persistence.entities.customer.Customer;
 import jakarta.persistence.*;
 import lombok.NoArgsConstructor;
 

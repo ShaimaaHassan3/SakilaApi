@@ -1,18 +1,11 @@
 package com.myapi.api.soapApi.customerservices;
 
-import com.google.gson.reflect.TypeToken;
-import com.myapi.dtos.AddressDto;
-import com.myapi.dtos.CustomerDto;
-import com.myapi.dtos.FilmDto;
-import com.myapi.dtos.PaymentDto;
-import com.myapi.persistence.entities.Customer;
-import com.myapi.persistence.entities.Film;
-import com.myapi.persistence.repositoryImp.BaseRepoImp;
+import com.myapi.dtos.customer.CustomerDto;
+import com.myapi.dtos.film.FilmDto;
+import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.services.CustomerService;
 import jakarta.jws.WebService;
-import org.modelmapper.ModelMapper;
 
-import java.lang.reflect.Type;
 import java.util.Set;
 
 @WebService(name = "CustomerWebServices")

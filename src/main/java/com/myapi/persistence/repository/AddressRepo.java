@@ -1,13 +1,12 @@
 package com.myapi.persistence.repository;
 
-import com.myapi.persistence.entities.Address;
-import com.myapi.persistence.entities.Customer;
+import com.myapi.persistence.entities.address.Address;
 
 import java.util.Set;
 
 public interface AddressRepo {
 
-    public Set<Address> getAllCustomers();
+    public Set<Address> getAllAddresses();
 
     public Address getAddressById(int ID);
 

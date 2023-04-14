@@ -9,5 +9,9 @@
             name="FilmWebServices"
             implementation="com.myapi.api.soapApi.filmservices.FilmServices"
             url-pattern="/ws/film" />
-    
+
+    <endpoint
+            name="FilmWebServices"
+            implementation="com.myapi.api.soapApi.addressservices.AddressServices"
+            url-pattern="/ws/address" />
 </endpoints>
