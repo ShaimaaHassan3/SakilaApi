@@ -1,19 +1,14 @@
 package com.myapi.api.soapApi.filmservices;
 
-import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.ActorDto;
 import com.myapi.dtos.CategoryDto;
 import com.myapi.dtos.FilmDto;
 import com.myapi.dtos.StoreDto;
-import com.myapi.persistence.entities.FilmActor;
-import com.myapi.persistence.repositoryImp.ProxyFilmService;
-import com.myapi.services.FilmService;
-import com.myapi.services.FilmServicesIn;
+import com.myapi.services.film.ProxyFilmService;
+import com.myapi.services.film.FilmService;
+import com.myapi.services.film.FilmServicesIn;
 import jakarta.jws.WebService;
-import org.modelmapper.ModelMapper;
 
-import java.lang.reflect.Type;
-import java.util.List;
 import java.util.Set;
 
 @WebService(name = "FilmWebServices")

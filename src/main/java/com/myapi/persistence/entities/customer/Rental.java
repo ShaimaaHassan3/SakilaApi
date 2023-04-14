@@ -1,5 +1,9 @@
-package com.myapi.persistence.entities;
+package com.myapi.persistence.entities.customer;
 
+import com.myapi.persistence.entities.Inventory;
+import com.myapi.persistence.entities.Staff;
+import com.myapi.persistence.entities.customer.Customer;
+import com.myapi.persistence.entities.customer.Payment;
 import jakarta.persistence.*;
 
 import java.util.Date;

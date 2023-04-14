@@ -1,17 +1,10 @@
 package com.myapi.dtos;
 
-import com.myapi.dtos.AddressDto;
-import com.myapi.dtos.PaymentDto;
-import com.myapi.dtos.StoreDto;
-import com.myapi.persistence.entities.Customer;
-import com.myapi.persistence.entities.Staff;
+import com.myapi.persistence.entities.customer.Customer;
 import lombok.Data;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
 import java.util.Set;
 

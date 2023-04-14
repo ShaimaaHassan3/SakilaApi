@@ -1,15 +1,15 @@
 package com.myapi.dtos;
 
+import com.myapi.persistence.entities.customer.Payment;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.Instant;
 import java.util.Date;
 
 /**
- * A DTO for the {@link com.myapi.persistence.entities.Payment} entity
+ * A DTO for the {@link Payment} entity
  */
 @Data
 @NoArgsConstructor

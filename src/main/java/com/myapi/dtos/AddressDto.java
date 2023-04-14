@@ -1,15 +1,11 @@
 package com.myapi.dtos;
 
-import com.myapi.dtos.CityDto;
-import com.myapi.dtos.StoreDto;
-import com.myapi.persistence.entities.Address;
+import com.myapi.persistence.entities.address.Address;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
-import java.util.Set;
 
 /**
  * A DTO for the {@link Address} entity

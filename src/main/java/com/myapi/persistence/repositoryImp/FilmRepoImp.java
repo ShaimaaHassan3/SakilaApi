@@ -2,6 +2,9 @@ package com.myapi.persistence.repositoryImp;
 
 import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.*;
+import com.myapi.persistence.entities.film.Film;
+import com.myapi.persistence.entities.film.FilmActor;
+import com.myapi.persistence.entities.film.FilmCategory;
 import com.myapi.persistence.repository.FilmRepo;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;

@@ -1,7 +1,8 @@
-package com.myapi.persistence.entities;
+package com.myapi.persistence.entities.customer;
 
+import com.myapi.persistence.entities.address.Address;
+import com.myapi.persistence.entities.Store;
 import jakarta.persistence.*;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;

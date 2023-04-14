@@ -1,14 +1,14 @@
 package com.myapi.dtos;
 
+import com.myapi.persistence.entities.customer.Rental;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
 
 /**
- * A DTO for the {@link com.myapi.persistence.entities.Rental} entity
+ * A DTO for the {@link Rental} entity
  */
 @Data
 @NoArgsConstructor

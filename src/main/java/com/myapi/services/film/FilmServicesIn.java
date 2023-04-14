@@ -1,4 +1,4 @@
-package com.myapi.services;
+package com.myapi.services.film;
 
 import com.myapi.dtos.FilmDto;
 

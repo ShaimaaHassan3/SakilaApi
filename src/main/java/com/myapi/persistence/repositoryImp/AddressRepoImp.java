@@ -1,9 +1,7 @@
 package com.myapi.persistence.repositoryImp;
 
-import com.myapi.persistence.entities.Address;
-import com.myapi.persistence.entities.Customer;
+import com.myapi.persistence.entities.address.Address;
 import com.myapi.persistence.repository.AddressRepo;
-import com.myapi.persistence.repository.CustomerRepo;
 
 import java.util.Set;
 
@@ -11,7 +9,7 @@ public class AddressRepoImp extends BaseRepoImp<Address> implements AddressRepo 
 
 
     @Override
-    public Set<Address> getAllCustomers() {
+    public Set<Address> getAllAddresses() {
         return getAll(new Address());
     }
 

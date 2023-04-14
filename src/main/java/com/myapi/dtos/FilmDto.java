@@ -1,14 +1,11 @@
 package com.myapi.dtos;
 
-import com.myapi.persistence.entities.Film;
-import com.myapi.persistence.entities.FilmActor;
-import lombok.AllArgsConstructor;
+import com.myapi.persistence.entities.film.Film;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 /**

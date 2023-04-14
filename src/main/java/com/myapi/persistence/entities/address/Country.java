@@ -1,4 +1,4 @@
-package com.myapi.persistence.entities;
+package com.myapi.persistence.entities.address;
 
 import jakarta.persistence.*;
 

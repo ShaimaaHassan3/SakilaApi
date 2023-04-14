@@ -1,5 +1,6 @@
 package com.myapi.persistence.entities;
 
+import com.myapi.persistence.entities.film.FilmCategory;
 import jakarta.persistence.*;
 
 import java.util.Date;

@@ -1,14 +1,14 @@
 package com.myapi.dtos;
 
+import com.myapi.persistence.entities.address.Country;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
 
 /**
- * A DTO for the {@link com.myapi.persistence.entities.Country} entity
+ * A DTO for the {@link Country} entity
  */
 @Data
 @NoArgsConstructor

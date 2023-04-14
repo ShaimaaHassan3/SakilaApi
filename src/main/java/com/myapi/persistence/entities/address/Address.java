@@ -1,5 +1,8 @@
-package com.myapi.persistence.entities;
+package com.myapi.persistence.entities.address;
 
+import com.myapi.persistence.entities.Staff;
+import com.myapi.persistence.entities.Store;
+import com.myapi.persistence.entities.customer.Customer;
 import jakarta.persistence.*;
 
 import java.util.Date;

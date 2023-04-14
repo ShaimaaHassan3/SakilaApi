@@ -1,4 +1,4 @@
-package com.myapi.persistence.entities;
+package com.myapi.persistence.entities.film;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
