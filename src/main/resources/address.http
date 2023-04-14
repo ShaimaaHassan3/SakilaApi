@@ -24,7 +24,7 @@ Content-Type: text/xml
 
     <soap:Body>
         <jets:getAddressById>
-        <arg0>7</arg0>
+        <arg0>1</arg0>
         </jets:getAddressById>
     </soap:Body>
 </soap:Envelope>
@@ -43,15 +43,42 @@ Content-Type: text/xml
          <address>692 Joliet Street</address>
         <address2></address2>
         <city>
-          <id>3</id>
-          <lastUpdate>2006-02-15T04:45:25+02:00</lastUpdate>
+          <id>38</id>
         </city>
-        <district>Cairo</district>
+        <district>Attika</district>
         <lastUpdate>2014-09-25T22:31:07+03:00</lastUpdate>
+        <location>AAAAAAEBAAAAB29Zz1q3N0BBBdGkXv1CQA==</location>
         <phone>448477190408</phone>
         <postalCode>83579</postalCode>
         </arg0>
         </jets:NewAddress>
+    </soap:Body>
+</soap:Envelope>
+### updateAddress
+POST http://localhost:9090/SakilaApi/ws/address HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://addressservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updateAddress>
+        <arg0>
+        <id>1</id>
+         <address>692 Joliet Street</address>
+        <address2></address2>
+        <city>
+          <id>38</id>
+        </city>
+        <district>Cairo</district>
+        <lastUpdate>2014-09-25T22:31:07+03:00</lastUpdate>
+        <location>AAAAAAEBAAAAB29Zz1q3N0BBBdGkXv1CQA==</location>
+        <phone>448477190408</phone>
+        <postalCode>83579</postalCode>
+        </arg0>
+        </jets:updateAddress>
     </soap:Body>
 </soap:Envelope>
 ### getAllStoriesInAddress

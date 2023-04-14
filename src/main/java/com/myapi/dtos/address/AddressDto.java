@@ -13,12 +13,13 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 public class AddressDto implements Serializable {
-    private  Integer id;
-    private  String address;
-    private  String address2;
-    private  String district;
+    private Integer id;
+    private String address;
+    private String address2;
+    private String district;
     private CityDto city;
-    private  String postalCode;
-    private  String phone;
+    private String postalCode;
+    private String phone;
     private Date lastUpdate;
+    private byte[] location;
 }

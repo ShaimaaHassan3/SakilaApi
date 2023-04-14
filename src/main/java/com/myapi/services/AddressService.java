@@ -37,6 +37,11 @@ public class AddressService {
         return modelMapper.map(addressRepo.createAddress(address), AddressDto.class);
     }
 
+    public AddressDto updateAddress(AddressDto addressDto) {
+        Address address = modelMapper.map(addressDto, Address.class);
+        return modelMapper.map(addressRepo.updateAddress(address), AddressDto.class);
+    }
+
     public Set<StoreDto> getAllStoriesInAddress(int ID) {
         Type type = new TypeToken<Set<StoreDto>>() {
         }.getType();
