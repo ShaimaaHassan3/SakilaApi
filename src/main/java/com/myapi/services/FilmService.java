@@ -88,4 +88,10 @@ public class FilmService implements FilmServicesIn {
             storeDtos.add(modelMapper.map(inventory.getStore(), StoreDto.class));
         return storeDtos;
     }
+
+    public Set<FilmDto> getAllFilmsWithCategory(String category) {
+        Type type = new TypeToken<Set<FilmDto>>() {
+        }.getType();
+        return modelMapper.map(service.getAllFilmsByCategory(category), type);
+    }
 }

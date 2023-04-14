@@ -68,4 +68,8 @@ public class FilmServices {
     public Set<StoreDto> getAllFilmStories(int filmId) {
         return service.getAllFilmStories(filmId);
     }
+
+    public Set<FilmDto> getAllFilmsWithCategory(String category) {
+        return service.getAllFilmsWithCategory(category);
+    }
 }
