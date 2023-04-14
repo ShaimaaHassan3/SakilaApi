@@ -1,11 +1,10 @@
 package com.myapi.dtos;
 
-import com.myapi.persistence.entities.City;
+import com.myapi.persistence.entities.address.City;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
 
 /**

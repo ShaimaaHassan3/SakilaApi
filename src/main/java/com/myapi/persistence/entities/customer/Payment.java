@@ -1,5 +1,6 @@
-package com.myapi.persistence.entities;
+package com.myapi.persistence.entities.customer;
 
+import com.myapi.persistence.entities.Staff;
 import jakarta.persistence.*;
 
 import java.math.BigDecimal;

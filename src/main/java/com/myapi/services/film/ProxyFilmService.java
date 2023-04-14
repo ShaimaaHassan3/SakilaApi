@@ -1,9 +1,6 @@
-package com.myapi.persistence.repositoryImp;
+package com.myapi.services.film;
 
 import com.myapi.dtos.FilmDto;
-import com.myapi.persistence.entities.Film;
-import com.myapi.services.FilmService;
-import com.myapi.services.FilmServicesIn;
 
 import java.util.Set;
 

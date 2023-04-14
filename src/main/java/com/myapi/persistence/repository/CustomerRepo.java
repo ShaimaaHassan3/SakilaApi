@@ -1,9 +1,8 @@
 package com.myapi.persistence.repository;
 
-import com.myapi.dtos.CustomerDto;
-import com.myapi.persistence.entities.Customer;
-import com.myapi.persistence.entities.Payment;
-import com.myapi.persistence.entities.Rental;
+import com.myapi.persistence.entities.customer.Customer;
+import com.myapi.persistence.entities.customer.Payment;
+import com.myapi.persistence.entities.customer.Rental;
 
 import java.util.Set;
 

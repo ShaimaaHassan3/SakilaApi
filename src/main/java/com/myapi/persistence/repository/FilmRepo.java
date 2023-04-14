@@ -1,9 +1,8 @@
 package com.myapi.persistence.repository;
 
-import com.myapi.persistence.entities.Film;
-import com.myapi.persistence.entities.FilmActor;
+import com.myapi.persistence.entities.film.Film;
+import com.myapi.persistence.entities.film.FilmActor;
 
-import java.util.List;
 import java.util.Set;
 
 public interface FilmRepo {

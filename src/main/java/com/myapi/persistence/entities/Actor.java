@@ -1,9 +1,9 @@
 package com.myapi.persistence.entities;
 
+import com.myapi.persistence.entities.film.FilmActor;
 import jakarta.persistence.*;
 import jakarta.xml.bind.annotation.XmlTransient;
 
-import java.time.Instant;
 import java.util.Date;
 import java.util.LinkedHashSet;
 import java.util.Set;
