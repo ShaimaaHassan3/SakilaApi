@@ -34,4 +34,9 @@ public class ActorService {
         Actor actor = modelMapper.map(actorDto, Actor.class);
         return modelMapper.map(actorRepo.addActor(actor), ActorDto.class);
     }
+
+    public ActorDto updateActor(ActorDto actorDto) {
+        Actor actor = modelMapper.map(actorDto, Actor.class);
+        return modelMapper.map(actorRepo.updateActor(actor), ActorDto.class);
+    }
 }
