@@ -69,3 +69,18 @@ Content-Type: text/xml
         </jets:updateActor>
     </soap:Body>
 </soap:Envelope>
+### getAllFilms
+POST http://localhost:9090/SakilaApi/ws/actor HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://actorServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getAllFilms>
+            <arg0>60</arg0>
+        </jets:getAllFilms>
+    </soap:Body>
+</soap:Envelope>

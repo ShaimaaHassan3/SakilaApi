@@ -3,6 +3,7 @@ package com.myapi.services;
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.ActorDto;
 import com.myapi.dtos.address.AddressDto;
+import com.myapi.dtos.film.FilmDto;
 import com.myapi.persistence.entities.Actor;
 import com.myapi.persistence.repository.ActorRepo;
 import com.myapi.persistence.repositoryImp.ActorRepoImp;
@@ -38,5 +39,10 @@ public class ActorService {
     public ActorDto updateActor(ActorDto actorDto) {
         Actor actor = modelMapper.map(actorDto, Actor.class);
         return modelMapper.map(actorRepo.updateActor(actor), ActorDto.class);
+    }
+    public Set<FilmDto> getFilms(int actorID) {
+        Type type = new TypeToken<Set<FilmDto>>() {
+        }.getType();
+        return modelMapper.map(actorRepo.getAllFilms(actorID), type);
     }
 }

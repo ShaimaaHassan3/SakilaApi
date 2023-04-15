@@ -1,6 +1,7 @@
 package com.myapi.persistence.repository;
 
 import com.myapi.persistence.entities.Actor;
+import com.myapi.persistence.entities.film.Film;
 import org.checkerframework.checker.units.qual.A;
 
 import java.util.Set;
@@ -10,4 +11,6 @@ public interface ActorRepo {
     Set<Actor> getAllActors();
     Actor addActor(Actor actor);
     Actor updateActor(Actor actor);
+    Set<Film> getAllFilms(int actorID);
+    int getNumberOfFilm(int actorId);
 }
