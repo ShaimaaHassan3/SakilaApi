@@ -24,4 +24,7 @@ public class ActorServices {
     public Set<ActorDto> getAllActors() {
         return service.getAllActors();
     }
+    public ActorDto addActor(ActorDto actorDto) {
+        return service.addActor(actorDto);
+    }
 }

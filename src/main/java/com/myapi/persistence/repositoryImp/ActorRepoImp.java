@@ -16,4 +16,9 @@ public class ActorRepoImp extends BaseRepoImp<Actor> implements ActorRepo {
     public Set<Actor> getAllActors() {
         return getAll(new Actor());
     }
+
+    @Override
+    public Actor addActor(Actor actor) {
+        return save(actor);
+    }
 }
