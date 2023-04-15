@@ -8,4 +8,5 @@ import java.util.Set;
 public interface ActorRepo {
     Actor getActorById(int Id);
     Set<Actor> getAllActors();
+    Actor addActor(Actor actor);
 }
