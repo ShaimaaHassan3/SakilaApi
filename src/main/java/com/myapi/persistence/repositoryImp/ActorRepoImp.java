@@ -21,4 +21,9 @@ public class ActorRepoImp extends BaseRepoImp<Actor> implements ActorRepo {
     public Actor addActor(Actor actor) {
         return save(actor);
     }
+
+    @Override
+    public Actor updateActor(Actor actor) {
+        return update(actor);
+    }
 }

@@ -9,4 +9,5 @@ public interface ActorRepo {
     Actor getActorById(int Id);
     Set<Actor> getAllActors();
     Actor addActor(Actor actor);
+    Actor updateActor(Actor actor);
 }
