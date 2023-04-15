@@ -24,6 +24,7 @@ D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\services\film\FilmService.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\entities\film\FilmText.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\entities\Store.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\entities\film\Category.java
+D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\services\ActorService.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\dtos\customer\RentalDto.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\dtos\film\LanguageDto.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\repositoryImp\AddressRepoImp.java
@@ -40,6 +41,7 @@ D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\dtos\customer\CustomerDto.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\entities\address\City.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\entities\Staff.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\repositoryImp\StoreRepoImp.java
+D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\api\soapApi\actorServices\ActorServices.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\entities\customer\Rental.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\persistence\repositoryImp\CityRepoImp.java
 D:\ITI\Amin\SakilaApi\src\main\java\com\myapi\api\soapApi\addressservices\AddressServices.java

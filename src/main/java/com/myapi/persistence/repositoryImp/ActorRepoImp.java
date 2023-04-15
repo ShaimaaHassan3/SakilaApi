@@ -48,11 +48,10 @@ public class ActorRepoImp extends BaseRepoImp<Actor> implements ActorRepo {
     }
 
     @Override
-    public int getNumberOfFilm(int actorId) {
+    public Long  getNumberOfFilm(int actorId) {
         String queryStr = "SELECT count(f) FROM Film f JOIN f.filmActors fa WHERE fa.actor.id = :id";
         Query q = entityManager.createQuery(queryStr);
         q.setParameter("id", actorId);
-        return (int) q.getSingleResult();
-
+        return (Long) q.getSingleResult();
     }
 }

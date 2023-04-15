@@ -12,5 +12,5 @@ public interface ActorRepo {
     Actor addActor(Actor actor);
     Actor updateActor(Actor actor);
     Set<Film> getAllFilms(int actorID);
-    int getNumberOfFilm(int actorId);
+    Long  getNumberOfFilm(int actorId);
 }

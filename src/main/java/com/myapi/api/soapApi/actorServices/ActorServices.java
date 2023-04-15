@@ -37,4 +37,9 @@ public class ActorServices {
     public Set<FilmDto> getAllFilms(int ID) {
         return service.getFilms(ID);
     }
+
+    @WebMethod(operationName = "FilmsNumber")
+    public String getNumberFilmOfActor(int actorId) {
+        return "Number Of Films For This Actor " + service.getNumberFilmOfActor(actorId);
+    }
 }

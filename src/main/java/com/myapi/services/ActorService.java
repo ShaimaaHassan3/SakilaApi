@@ -45,4 +45,7 @@ public class ActorService {
         }.getType();
         return modelMapper.map(actorRepo.getAllFilms(actorID), type);
     }
+    public Long  getNumberFilmOfActor(int actorId) {
+        return actorRepo.getNumberOfFilm(actorId);
+    }
 }
