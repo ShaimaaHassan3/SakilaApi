@@ -1,5 +1,5 @@
 ### Actor
-### getAllActors
+### getActorByID
 POST http://localhost:9090/SakilaApi/ws/actor HTTP/1.1
 Content-Type: text/xml
 
@@ -12,5 +12,20 @@ Content-Type: text/xml
         <jets:actor>
             <arg0>3</arg0>
         </jets:actor>
+    </soap:Body>
+</soap:Envelope>
+
+### getAllActors
+POST http://localhost:9090/SakilaApi/ws/actor HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://actorServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:actors>
+        </jets:actors>
     </soap:Body>
 </soap:Envelope>
