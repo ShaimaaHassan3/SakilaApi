@@ -1,6 +1,5 @@
 package com.myapi.dtos.film;
 
-import com.myapi.dtos.ActorDto;
 import com.myapi.persistence.entities.film.FilmActor;
 import com.myapi.persistence.entities.film.FilmActorId;
 import lombok.Data;

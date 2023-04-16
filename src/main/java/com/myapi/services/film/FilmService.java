@@ -1,7 +1,7 @@
 package com.myapi.services.film;
 
 import com.google.gson.reflect.TypeToken;
-import com.myapi.dtos.ActorDto;
+import com.myapi.dtos.film.ActorDto;
 import com.myapi.dtos.film.CategoryDto;
 import com.myapi.dtos.film.FilmDto;
 import com.myapi.dtos.StoreDto;
@@ -9,7 +9,7 @@ import com.myapi.persistence.entities.*;
 import com.myapi.persistence.entities.film.Film;
 import com.myapi.persistence.entities.film.FilmActor;
 import com.myapi.persistence.entities.film.FilmCategory;
-import com.myapi.persistence.repositoryImp.FilmRepoImp;
+import com.myapi.persistence.repositoryImp.film.FilmRepoImp;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;

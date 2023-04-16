@@ -1,12 +1,11 @@
-package com.myapi.services;
+package com.myapi.services.film;
 
 import com.google.gson.reflect.TypeToken;
-import com.myapi.dtos.ActorDto;
-import com.myapi.dtos.address.AddressDto;
+import com.myapi.dtos.film.ActorDto;
 import com.myapi.dtos.film.FilmDto;
 import com.myapi.persistence.entities.Actor;
 import com.myapi.persistence.repository.ActorRepo;
-import com.myapi.persistence.repositoryImp.ActorRepoImp;
+import com.myapi.persistence.repositoryImp.film.ActorRepoImp;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;
