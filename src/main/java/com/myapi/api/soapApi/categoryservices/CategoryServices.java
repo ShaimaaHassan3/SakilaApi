@@ -27,4 +27,8 @@ public class CategoryServices {
     public Set<CategoryDto> getAllCategories() {
         return service.getAllCategories();
     }
+    @WebMethod(operationName = "newCategory")
+    public CategoryDto addCategory(CategoryDto categoryDto) {
+        return service.addCategory(categoryDto);
+    }
 }

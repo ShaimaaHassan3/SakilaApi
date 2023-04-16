@@ -43,3 +43,22 @@ Content-Type: text/xml
         </jets:categories>
     </soap:Body>
 </soap:Envelope>
+### add Category 
+POST http://localhost:9090/SakilaApi/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://categoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:newCategory>
+           <arg0>
+            <id>17</id>
+        <lastUpdate>2006-02-15T04:46:27+02:00</lastUpdate>
+        <name>Animation</name>
+           </arg0>
+        </jets:newCategory>
+    </soap:Body>
+</soap:Envelope>

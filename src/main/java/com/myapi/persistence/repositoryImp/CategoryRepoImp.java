@@ -32,4 +32,9 @@ public class CategoryRepoImp extends BaseRepoImp<Category> implements CategoryRe
     public Set<Category> getAllCategories() {
         return getAll(new Category());
     }
+
+    @Override
+    public Category addCategory(Category category) {
+        return save(category);
+    }
 }
