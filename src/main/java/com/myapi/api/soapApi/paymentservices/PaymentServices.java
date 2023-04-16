@@ -6,6 +6,8 @@ import com.myapi.services.PaymentService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebService;
 
+import java.util.Set;
+
 @WebService(name = "PaymentWebServices")
 public class PaymentServices {
     PaymentService service;
@@ -20,5 +22,9 @@ public class PaymentServices {
     @WebMethod(operationName = "customer")
     public CustomerDto getCustomerPayment(int paymentID) {
         return service.getCustomerPayment(paymentID);
+    }
+    @WebMethod(operationName = "payments")
+    public Set<PaymentDto> getAllPayments() {
+        return service.getAllPayment();
     }
 }
