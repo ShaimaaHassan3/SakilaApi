@@ -21,4 +21,8 @@ public class StaffServices {
     public StaffDto getStaffByID(int staffID) {
         return service.getStaffById(staffID);
     }
+    public StaffDto addStaff(StaffDto staffDto) {
+        System.out.println("staffDto : " + staffDto);
+        return service.addStaff(staffDto);
+    }
 }
