@@ -2,32 +2,36 @@
 
 <endpoints xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime" version="2.0">
     <endpoint
-    name="CustomerService"
-    implementation="com.myapi.api.soapApi.customerservices.CustomerServices"
-    url-pattern="/ws/customer" />
+            name="CustomerService"
+            implementation="com.myapi.api.soapApi.customerservices.CustomerServices"
+            url-pattern="/ws/customer"/>
     <endpoint
             name="FilmWebServices"
             implementation="com.myapi.api.soapApi.filmservices.FilmServices"
-            url-pattern="/ws/film" />
+            url-pattern="/ws/film"/>
 
     <endpoint
             name="AddressServices"
             implementation="com.myapi.api.soapApi.addressservices.AddressServices"
-            url-pattern="/ws/address" />
+            url-pattern="/ws/address"/>
     <endpoint
             name="ActorServices"
             implementation="com.myapi.api.soapApi.actorServices.ActorServices"
-            url-pattern="/ws/actor" />
+            url-pattern="/ws/actor"/>
     <endpoint
             name="StaffServices"
             implementation="com.myapi.api.soapApi.staff.StaffServices"
-            url-pattern="/ws/staff" />
+            url-pattern="/ws/staff"/>
     <endpoint
             name="StoreServices"
             implementation="com.myapi.api.soapApi.storeServices.StoreServices"
-            url-pattern="/ws/store" />
+            url-pattern="/ws/store"/>
     <endpoint
             name="CategoryServices"
             implementation="com.myapi.api.soapApi.categoryservices.CategoryServices"
-            url-pattern="/ws/category" />
+            url-pattern="/ws/category"/>
+    <endpoint
+            name="CategoryServices"
+            implementation="com.myapi.api.soapApi.paymentservices.PaymentServices"
+            url-pattern="/ws/payment"/>
 </endpoints>
