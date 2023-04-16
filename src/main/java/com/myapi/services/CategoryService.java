@@ -3,6 +3,7 @@ package com.myapi.services;
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.dtos.film.CategoryDto;
+import com.myapi.dtos.film.FilmDto;
 import com.myapi.persistence.entities.film.Category;
 import com.myapi.persistence.repository.CategoryRepo;
 import com.myapi.persistence.repositoryImp.CategoryRepoImp;
@@ -37,5 +38,16 @@ public class CategoryService {
     public CategoryDto addCategory(CategoryDto categoryDto) {
         Category category = modelMapper.map(categoryDto, Category.class);
         return modelMapper.map(categoryRepo.addCategory(category), CategoryDto.class);
+    }
+
+    public CategoryDto updateCategory(CategoryDto categoryDto) {
+        Category category = modelMapper.map(categoryDto, Category.class);
+        return modelMapper.map(categoryRepo.updateCategory(category), CategoryDto.class);
+    }
+
+    public Set<FilmDto> getFilmsByCategory(String catName) {
+        Type type = new TypeToken<Set<FilmDto>>() {
+        }.getType();
+        return modelMapper.map(categoryRepo.getAllFilmsByCategory(catName), type);
     }
 }
