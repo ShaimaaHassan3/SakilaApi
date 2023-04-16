@@ -12,6 +12,6 @@ public interface StaffRepo {
     Staff addStaff(Staff staff);
     Staff updateStaff(Staff staff);
     Staff getStaffByName(String fName , String lName);
-    Set<Rental> getAllRentalByStaff(Staff staff);
-    Set<Payment> getAllPaymentByStaff(Staff staff);
+    Set<Rental> getAllRentalByStaff(int staffID);
+    Set<Payment> getAllPaymentByStaff(int staffID);
 }

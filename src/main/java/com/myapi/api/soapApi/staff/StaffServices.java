@@ -1,6 +1,7 @@
 package com.myapi.api.soapApi.staff;
 
 import com.myapi.dtos.StaffDto;
+import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.dtos.customer.RentalDto;
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.customer.Rental;
@@ -41,7 +42,13 @@ public class StaffServices {
         return service.getStaffByName(fName, lName);
     }
 
-    public Set<RentalDto> getAllRentalByStaff(StaffDto staffDto) {
-        return service.getAllRentalByStaff(staffDto);
+    @WebMethod(operationName = "Rentals")
+    public Set<RentalDto> getAllRentalByStaff(int staffID) {
+        return service.getAllRentalByStaff(staffID);
+    }
+
+    @WebMethod(operationName = "Payments")
+    public Set<PaymentDto> getAllPaymentByStaff(int staffId) {
+        return service.getAllPaymentByStaff(staffId);
     }
 }

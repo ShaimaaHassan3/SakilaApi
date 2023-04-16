@@ -4,6 +4,7 @@ import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.Store;
 import com.myapi.persistence.entities.address.Address;
+import com.myapi.persistence.entities.customer.Payment;
 import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.repository.AddressRepo;
 import com.myapi.persistence.repository.StaffRepo;
@@ -63,11 +64,21 @@ public class StaffRepoImp extends BaseRepoImp<Staff> implements StaffRepo {
     }
 
     @Override
-    public Set<Rental> getAllRentalByStaff(Staff staff) {
-        String quaryString = "SELECT r FROM Rental r WHERE r.staff = :staff";
+    public Set<Rental> getAllRentalByStaff(int staffID){
+        String quaryString = "SELECT r FROM Rental r WHERE r.staff.id = :staffId";
         Query query = entityManager.createQuery(quaryString);
-        query.setParameter("staff", staff);
+        query.setParameter("staffId", staffID);
+        query.setMaxResults(10);
         return (Set<Rental>) query.getResultStream().collect(Collectors.toSet());
+    }
+
+    @Override
+    public Set<Payment> getAllPaymentByStaff(int staffID) {
+        String quaryString = "SELECT p FROM Payment p WHERE p.staff.id = :staffId";
+        Query query = entityManager.createQuery(quaryString);
+        query.setParameter("staffId", staffID);
+        query.setMaxResults(10);
+        return (Set<Payment>) query.getResultStream().collect(Collectors.toSet());
     }
 
 }
