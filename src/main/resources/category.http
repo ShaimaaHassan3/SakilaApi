@@ -96,3 +96,18 @@ Content-Type: text/xml
         </jets:films>
     </soap:Body>
 </soap:Envelope>
+### Get Number Films By Category 
+POST http://localhost:9090/SakilaApi/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://categoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:filmNumber>
+            <arg0>Hendi</arg0>
+        </jets:filmNumber>
+    </soap:Body>
+</soap:Envelope>

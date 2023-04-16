@@ -50,4 +50,7 @@ public class CategoryService {
         }.getType();
         return modelMapper.map(categoryRepo.getAllFilmsByCategory(catName), type);
     }
+    public Long getNumberOfFilmsByCategory(String catName) {
+        return categoryRepo.getNumberFilmsByCategory(catName);
+    }
 }

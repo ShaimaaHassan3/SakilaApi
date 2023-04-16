@@ -12,4 +12,5 @@ public interface CategoryRepo {
     public Category addCategory(Category category);
     public Category updateCategory(Category category);
     public Set<Film> getAllFilmsByCategory(String catNAme);
+    public Long getNumberFilmsByCategory(String catNAme);
 }

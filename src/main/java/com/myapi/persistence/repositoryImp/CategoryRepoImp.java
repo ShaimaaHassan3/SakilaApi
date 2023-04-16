@@ -51,7 +51,15 @@ public class CategoryRepoImp extends BaseRepoImp<Category> implements CategoryRe
         Category category = getCategoryByName(catNAme);
         Set<Film> films = new HashSet<>();
         for (FilmCategory filmCategory : category.getFilmCategories())
-             films.add(filmCategory.getFilm());
+            films.add(filmCategory.getFilm());
         return films;
+    }
+
+    @Override
+    public Long getNumberFilmsByCategory(String catNAme) {
+        String queryStr = "SELECT COUNT(f) FROM Film f JOIN f.filmCategories c WHERE c.category.name = :catNAme";
+        Query q = entityManager.createQuery(queryStr);
+        q.setParameter("catNAme", catNAme);
+        return (Long) q.getSingleResult();
     }
 }

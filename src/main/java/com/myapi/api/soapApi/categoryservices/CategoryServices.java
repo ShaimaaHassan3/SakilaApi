@@ -43,4 +43,9 @@ public class CategoryServices {
     public Set<FilmDto> getFilmsByCategory(String catName) {
         return service.getFilmsByCategory(catName);
     }
+
+    @WebMethod(operationName = "filmNumber")
+    public String getNumberOfFilmsByCategory(String catName) {
+        return "There Is " + service.getNumberOfFilmsByCategory(catName) + " In " + catName + " Category";
+    }
 }
