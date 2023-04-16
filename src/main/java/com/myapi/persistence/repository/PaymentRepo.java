@@ -14,5 +14,6 @@ public interface PaymentRepo {
     public Staff getStaffProcessedPayment(int paymentId);
     public Rental getRentalApplied(int paymentId);
     public Payment addPayment(Payment payment);
+    public Payment updatePayment(Payment payment);
 
 }

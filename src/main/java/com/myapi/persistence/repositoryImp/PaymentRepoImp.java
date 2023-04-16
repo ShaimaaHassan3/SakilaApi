@@ -49,4 +49,15 @@ public class PaymentRepoImp extends BaseRepoImp<Payment> implements PaymentRepo 
         payment.setCustomer(customer);
         return save(payment);
     }
+
+    @Override
+    public Payment updatePayment(Payment payment) {
+        StaffRepo staffRepo = new StaffRepoImp();
+        CustomerRepo customerRepo = new CustomerRepoImp();
+        Staff staff = staffRepo.getStaffById(payment.getStaff().getId());
+        Customer customer = customerRepo.getCustomerById(payment.getCustomer().getId());
+        payment.setStaff(staff);
+        payment.setCustomer(customer);
+        return update(payment);
+    }
 }

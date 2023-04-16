@@ -73,7 +73,7 @@ Content-Type: text/xml
         </jets:rental>
     </soap:Body>
 </soap:Envelope>
-### Get Rental of Payment
+### add New Payment
 POST http://localhost:9090/SakilaApi/ws/payment HTTP/1.1
 Content-Type: text/xml
 
@@ -96,5 +96,31 @@ Content-Type: text/xml
                   </customerDto>
             </arg0>
         </jets:newPayment>
+    </soap:Body>
+</soap:Envelope>
+### update New Payment
+POST http://localhost:9090/SakilaApi/ws/payment HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://paymentservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updatePayment>
+            <arg0>
+                <id>16045</id>
+                <amount>0.99</amount>
+                <lastUpdate>2006-02-15T22:12:30+02:00</lastUpdate>
+                <paymentDate>2005-05-28T10:35:23+03:00</paymentDate>  
+                 <staff>
+                    <id>4</id>
+                  </staff>
+                  <customerDto>
+                    <id>3</id>
+                  </customerDto>
+            </arg0>
+        </jets:updatePayment>
     </soap:Body>
 </soap:Envelope>

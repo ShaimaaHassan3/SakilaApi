@@ -46,4 +46,9 @@ public class PaymentServices {
     public PaymentDto addPayment(PaymentDto paymentDto) {
         return service.addPayment(paymentDto);
     }
+
+    @WebMethod(operationName = "updatePayment")
+    public PaymentDto updatePayment(PaymentDto paymentDto) {
+        return service.updatePayment(paymentDto);
+    }
 }

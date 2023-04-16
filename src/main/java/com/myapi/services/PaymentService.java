@@ -50,4 +50,8 @@ public class PaymentService {
         Payment payment = modelMapper.map(paymentDto, Payment.class);
         return modelMapper.map(paymentRepo.addPayment(payment), PaymentDto.class);
     }
+    public PaymentDto updatePayment(PaymentDto paymentDto) {
+        Payment payment = modelMapper.map(paymentDto, Payment.class);
+        return modelMapper.map(paymentRepo.updatePayment(payment), PaymentDto.class);
+    }
 }
