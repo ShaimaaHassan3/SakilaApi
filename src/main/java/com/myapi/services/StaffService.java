@@ -34,4 +34,13 @@ public class StaffService {
         return modelMapper.map(staffRepo.addStaff(staff), StaffDto.class);
     }
 
+    public StaffDto updateStaff(StaffDto staffDto) {
+        Staff staff = modelMapper.map(staffDto, Staff.class);
+        return modelMapper.map(staffRepo.updateStaff(staff), StaffDto.class);
+    }
+
+    public StaffDto getStaffByName(String fName, String lName) {
+        return modelMapper.map(staffRepo.getStaffByName(fName, lName), StaffDto.class);
+    }
+
 }
