@@ -102,3 +102,48 @@ Content-Type: text/xml
         </jets:StaffByName>
     </soap:Body>
 </soap:Envelope>
+### GetStaffByID
+POST http://localhost:9090/SakilaApi/ws/staff HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://staff.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getStaffByID>
+            <arg0>2</arg0>
+        </jets:getStaffByID>
+    </soap:Body>
+</soap:Envelope>
+### getAllRentalByStaff
+POST http://localhost:9090/SakilaApi/ws/staff HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://staff.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:Rentals>
+           <arg0>3</arg0>
+        </jets:Rentals>
+    </soap:Body>
+</soap:Envelope>
+### Payments
+POST http://localhost:9090/SakilaApi/ws/staff HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://staff.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:Payments>
+            <arg0>1</arg0>
+        </jets:Payments>
+    </soap:Body>
+</soap:Envelope>
