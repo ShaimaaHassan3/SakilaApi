@@ -6,6 +6,8 @@ import com.myapi.persistence.repository.CategoryRepo;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 
+import java.util.Set;
+
 public class CategoryRepoImp extends BaseRepoImp<Category> implements CategoryRepo {
     EntityManager entityManager;
 
@@ -24,5 +26,10 @@ public class CategoryRepoImp extends BaseRepoImp<Category> implements CategoryRe
         Query query = entityManager.createQuery(queryString);
         query.setParameter("catName", catName);
         return (Category) query.getSingleResult();
+    }
+
+    @Override
+    public Set<Category> getAllCategories() {
+        return getAll(new Category());
     }
 }
