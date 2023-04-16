@@ -4,6 +4,7 @@ import com.myapi.dtos.InventoryDto;
 import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.StoreDetailDto;
 import com.myapi.dtos.StoreDto;
+import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.services.StoreService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebService;
@@ -53,5 +54,10 @@ public class StoreServices {
     @WebMethod(operationName = "staffs")
     public Set<StaffDto> getAllStaff(int storeID) {
         return service.getAllStaff(storeID);
+    }
+
+    @WebMethod(operationName = "customers")
+    public Set<CustomerDto> getAllCustomer(int storeID) {
+        return service.getAllCustomer(storeID);
     }
 }

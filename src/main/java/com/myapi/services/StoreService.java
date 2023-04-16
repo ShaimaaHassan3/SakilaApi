@@ -6,11 +6,13 @@ import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.StoreDetailDto;
 import com.myapi.dtos.StoreDto;
 import com.myapi.dtos.address.AddressDto;
+import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.persistence.entities.Inventory;
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.Store;
 import com.myapi.persistence.entities.address.Address;
+import com.myapi.persistence.entities.customer.Customer;
 import com.myapi.persistence.repository.StoreRepo;
 import com.myapi.persistence.repositoryImp.StoreRepoImp;
 import org.modelmapper.ModelMapper;
@@ -66,6 +68,15 @@ public class StoreService {
         Set<StaffDto> staffDtos = new HashSet<>();
         for (Staff staff : store.getStaff()) {
             staffDtos.add(modelMapper.map(staff, StaffDto.class));
+        }
+        return staffDtos;
+    }
+
+    public Set<CustomerDto> getAllCustomer(int storeID) {
+        Store store = storeRepo.getStoreById(storeID);
+        Set<CustomerDto> staffDtos = new HashSet<>();
+        for (Customer customer : store.getCustomers()) {
+            staffDtos.add(modelMapper.map(customer, CustomerDto.class));
         }
         return staffDtos;
     }

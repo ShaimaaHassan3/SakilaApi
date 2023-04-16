@@ -125,3 +125,18 @@ Content-Type: text/xml
         </jets:staffs>
     </soap:Body>
 </soap:Envelope>
+### Get ALL customers
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:customers>
+            <arg0>1</arg0>
+        </jets:customers>
+    </soap:Body>
+</soap:Envelope>
