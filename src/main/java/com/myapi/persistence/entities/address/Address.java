@@ -4,6 +4,8 @@ import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.Store;
 import com.myapi.persistence.entities.customer.Customer;
 import jakarta.persistence.*;
+import org.locationtech.jts.geom.Geometry;
+import org.locationtech.jts.io.WKBReader;
 
 import java.util.Date;
 import java.util.LinkedHashSet;
@@ -136,10 +138,23 @@ public class Address {
         this.customers = customers;
     }
 
-/*
-    TODO [JPA Buddy] create field to map the 'location' column
-     Available actions: Define target Java type | Uncomment as is | Remove column mapping
+//    TODO [JPA Buddy] create field to map the 'location' column
+//     Available actions: Define target Java type | Uncomment as is | Remove column mapping
+//    @Column(name = "location", columnDefinition = "GEOMETRY(65535) not null")
     @Column(name = "location", columnDefinition = "GEOMETRY(65535) not null")
-    private Object location;
-*/
+    private byte[] location;
+
+    public void setLocation(byte[] location) {
+        this.location = location;
+    }
+    public byte[] getLocation() {
+        return location;
+    }
+
+//    public Geometry getLocationGeometry() throws Exception {
+//        WKBReader reader = new WKBReader();
+//        return reader.read(location);
+//    }
+
+
 }

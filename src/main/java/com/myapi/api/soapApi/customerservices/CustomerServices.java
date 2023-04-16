@@ -1,8 +1,8 @@
 package com.myapi.api.soapApi.customerservices;
 
-import com.myapi.dtos.CustomerDto;
-import com.myapi.dtos.FilmDto;
-import com.myapi.dtos.PaymentDto;
+import com.myapi.dtos.customer.CustomerDto;
+import com.myapi.dtos.film.FilmDto;
+import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.services.CustomerService;
 import jakarta.jws.WebService;
 

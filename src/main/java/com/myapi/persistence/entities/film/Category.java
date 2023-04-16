@@ -1,4 +1,4 @@
-package com.myapi.persistence.entities;
+package com.myapi.persistence.entities.film;
 
 import com.myapi.persistence.entities.film.FilmCategory;
 import jakarta.persistence.*;

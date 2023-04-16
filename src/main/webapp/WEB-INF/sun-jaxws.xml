@@ -14,4 +14,16 @@
             name="FilmWebServices"
             implementation="com.myapi.api.soapApi.addressservices.AddressServices"
             url-pattern="/ws/address" />
+    <endpoint
+            name="FilmWebServices"
+            implementation="com.myapi.api.soapApi.actorServices.ActorServices"
+            url-pattern="/ws/actor" />
+    <endpoint
+            name="FilmWebServices"
+            implementation="com.myapi.api.soapApi.staff.StaffServices"
+            url-pattern="/ws/staff" />
+    <endpoint
+            name="FilmWebServices"
+            implementation="com.myapi.api.soapApi.storeServices.StoreServices"
+            url-pattern="/ws/store" />
 </endpoints>

@@ -1,5 +1,6 @@
-package com.myapi.dtos;
+package com.myapi.dtos.customer;
 
+import com.myapi.dtos.InventoryDto;
 import com.myapi.persistence.entities.customer.Rental;
 import lombok.Data;
 import lombok.NoArgsConstructor;

@@ -1,10 +1,10 @@
 package com.myapi.dtos;
 
+import com.myapi.dtos.film.FilmDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
-import java.time.Instant;
 import java.util.Date;
 
 /**
@@ -13,7 +13,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 public class InventoryDto implements Serializable {
-    private  FilmDto film;
+    private FilmDto film;
     private  StoreDto store;
     private Date lastUpdate;
 }

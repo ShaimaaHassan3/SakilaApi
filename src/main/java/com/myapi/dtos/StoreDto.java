@@ -1,5 +1,6 @@
 package com.myapi.dtos;
 
+import com.myapi.dtos.address.AddressDto;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -15,5 +16,5 @@ public class StoreDto implements Serializable {
     private Short id;
     private Date lastUpdate;
 //    private AddressDto address;
-    private StaffDto managerStaff;
+//    private StaffDto managerStaff;
 }

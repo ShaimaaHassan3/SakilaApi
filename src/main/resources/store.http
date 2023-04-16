@@ -1,0 +1,72 @@
+### Store
+### Get Store By ID
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:Store>
+            <arg0>2</arg0>
+        </jets:Store>
+    </soap:Body>
+</soap:Envelope>
+
+### Get Stories
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:Stories>
+        </jets:Stories>
+    </soap:Body>
+</soap:Envelope>
+
+### Get Manager Of Store
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:manager>
+            <arg0>1</arg0>
+        </jets:manager>
+    </soap:Body>
+</soap:Envelope>
+
+### newStore
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:newStore>
+            <arg0>
+            <id>4</id>
+        <address>
+          <id>2</id>
+        </address>
+        <lastUpdate>2006-02-15T04:57:12+02:00</lastUpdate>
+        <managerStaff>
+          <id>3</id>
+        </managerStaff>
+            </arg0>
+        </jets:newStore>
+    </soap:Body>
+</soap:Envelope>
