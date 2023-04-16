@@ -1,4 +1,4 @@
-package com.myapi.persistence.repositoryImp;
+package com.myapi.persistence.repositoryImp.film;
 
 import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.*;
@@ -6,6 +6,7 @@ import com.myapi.persistence.entities.film.Film;
 import com.myapi.persistence.entities.film.FilmActor;
 import com.myapi.persistence.entities.film.FilmCategory;
 import com.myapi.persistence.repository.FilmRepo;
+import com.myapi.persistence.repositoryImp.BaseRepoImp;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
