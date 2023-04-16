@@ -31,4 +31,15 @@ public class StaffRepoImp extends BaseRepoImp<Staff> implements StaffRepo {
         return save(staff);
     }
 
+    @Override
+    public Staff updateStaff(Staff staff) {
+        AddressRepo addressRepo = new AddressRepoImp();
+        StoreRepo storeRepo = new StoreRepoImp();
+        Address address = addressRepo.getAddressById(staff.getAddress().getId());
+        Store store = storeRepo.getStoreById(staff.getStore().getId());
+        staff.setStore(store);
+        staff.setAddress(address);
+        return update(staff);
+    }
+
 }

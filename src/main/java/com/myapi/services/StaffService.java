@@ -33,5 +33,9 @@ public class StaffService {
         Staff staff = modelMapper.map(staffDto, Staff.class);
         return modelMapper.map(staffRepo.addStaff(staff), StaffDto.class);
     }
+    public StaffDto updateStaff(StaffDto staffDto) {
+        Staff staff = modelMapper.map(staffDto, Staff.class);
+        return modelMapper.map(staffRepo.updateStaff(staff), StaffDto.class);
+    }
 
 }

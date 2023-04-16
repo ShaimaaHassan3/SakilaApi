@@ -8,4 +8,5 @@ public interface StaffRepo {
     Set<Staff> getAllStaff();
     Staff getStaffById(int ID);
     Staff addStaff(Staff staff);
+    Staff updateStaff(Staff staff);
 }
