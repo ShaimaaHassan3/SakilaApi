@@ -15,5 +15,6 @@ public interface PaymentRepo {
     public Rental getRentalApplied(int paymentId);
     public Payment addPayment(Payment payment);
     public Payment updatePayment(Payment payment);
+    public Payment getLastPayment(int customerID);
 
 }

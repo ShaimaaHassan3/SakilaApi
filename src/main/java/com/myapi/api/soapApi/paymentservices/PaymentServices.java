@@ -51,4 +51,10 @@ public class PaymentServices {
     public PaymentDto updatePayment(PaymentDto paymentDto) {
         return service.updatePayment(paymentDto);
     }
+
+    @WebMethod(operationName = "lastPayment")
+    public PaymentDto getLastPayment(int customerId) {
+        return service.getLastPayment(customerId);
+    }
+
 }

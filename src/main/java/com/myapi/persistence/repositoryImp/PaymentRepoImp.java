@@ -1,5 +1,6 @@
 package com.myapi.persistence.repositoryImp;
 
+import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.customer.Customer;
 import com.myapi.persistence.entities.customer.Payment;
@@ -7,10 +8,18 @@ import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.repository.CustomerRepo;
 import com.myapi.persistence.repository.PaymentRepo;
 import com.myapi.persistence.repository.StaffRepo;
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.Query;
 
 import java.util.Set;
 
 public class PaymentRepoImp extends BaseRepoImp<Payment> implements PaymentRepo {
+    EntityManager entityManager;
+
+    public PaymentRepoImp() {
+        entityManager = PersistenceManager.getInstance().getEntityManagerFactory().createEntityManager();
+    }
+
     @Override
     public Payment getPaymentById(int paymentID) {
         return getById(paymentID);
@@ -59,5 +68,14 @@ public class PaymentRepoImp extends BaseRepoImp<Payment> implements PaymentRepo 
         payment.setStaff(staff);
         payment.setCustomer(customer);
         return update(payment);
+    }
+
+    @Override
+    public Payment getLastPayment(int customerID) {
+        String queryString = "FROM Payment p WHERE p.customer.id = :customerId ORDER BY p.paymentDate DESC";
+        Query query = entityManager.createQuery(queryString);
+        query.setParameter("customerId", customerID);
+        query.setMaxResults(1);
+        return (Payment) query.getSingleResult();
     }
 }
