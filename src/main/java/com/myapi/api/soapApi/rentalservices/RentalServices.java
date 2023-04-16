@@ -5,6 +5,8 @@ import com.myapi.services.RentalService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebService;
 
+import java.util.Set;
+
 @WebService(name = "RentalWebServices")
 public class RentalServices {
     RentalService service;
@@ -16,5 +18,10 @@ public class RentalServices {
     @WebMethod(operationName = "rental")
     public RentalDto getRental(int rentalID) {
         return service.getRental(rentalID);
+    }
+
+    @WebMethod(operationName = "rentals")
+    public Set<RentalDto> getAllRental() {
+        return service.getAllRental();
     }
 }
