@@ -39,4 +39,8 @@ public class StoreService {
         Store store = modelMapper.map(storeDetailDto, Store.class);
         return modelMapper.map(storeRepo.addStore(store), StoreDetailDto.class);
     }
+    public StoreDetailDto updateStore(StoreDetailDto storeDetailDto) {
+        Store store = modelMapper.map(storeDetailDto, Store.class);
+        return modelMapper.map(storeRepo.updateStore(store), StoreDetailDto.class);
+    }
 }

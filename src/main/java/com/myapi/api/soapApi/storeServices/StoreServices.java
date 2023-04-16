@@ -37,4 +37,9 @@ public class StoreServices {
         System.out.println("Store : " + storeDetailDto);
         return service.addStore(storeDetailDto);
     }
+    @WebMethod(operationName = "updateStore")
+    public StoreDetailDto updateStore(StoreDetailDto storeDetailDto) {
+        System.out.println("Store : " + storeDetailDto);
+        return service.updateStore(storeDetailDto);
+    }
 }
