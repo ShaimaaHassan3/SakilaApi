@@ -6,7 +6,7 @@ import com.myapi.dtos.film.FilmDto;
 import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.persistence.entities.customer.Customer;
 import com.myapi.persistence.entities.customer.Rental;
-import com.myapi.persistence.repositoryImp.CustomerRepoImp;
+import com.myapi.persistence.repositoryImp.customer.CustomerRepoImp;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;

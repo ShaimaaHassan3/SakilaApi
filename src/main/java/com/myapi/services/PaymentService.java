@@ -2,14 +2,12 @@ package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.StaffDto;
-import com.myapi.dtos.address.AddressDto;
 import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.dtos.customer.RentalDto;
 import com.myapi.persistence.entities.customer.Payment;
-import com.myapi.persistence.entities.customer.Rental;
-import com.myapi.persistence.repository.PaymentRepo;
-import com.myapi.persistence.repositoryImp.PaymentRepoImp;
+import com.myapi.persistence.repository.customer.PaymentRepo;
+import com.myapi.persistence.repositoryImp.customer.PaymentRepoImp;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;

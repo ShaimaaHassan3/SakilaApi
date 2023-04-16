@@ -1,4 +1,4 @@
-package com.myapi.persistence.repository;
+package com.myapi.persistence.repository.film;
 
 import com.myapi.persistence.entities.Actor;
 import com.myapi.persistence.entities.film.Film;
