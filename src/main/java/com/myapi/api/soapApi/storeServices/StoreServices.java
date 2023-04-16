@@ -1,5 +1,6 @@
 package com.myapi.api.soapApi.storeServices;
 
+import com.myapi.dtos.InventoryDto;
 import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.StoreDetailDto;
 import com.myapi.dtos.StoreDto;
@@ -36,5 +37,21 @@ public class StoreServices {
     public StoreDetailDto addStore(StoreDetailDto storeDetailDto) {
         System.out.println("Store : " + storeDetailDto);
         return service.addStore(storeDetailDto);
+    }
+
+    @WebMethod(operationName = "updateStore")
+    public StoreDetailDto updateStore(StoreDetailDto storeDetailDto) {
+        System.out.println("Store : " + storeDetailDto);
+        return service.updateStore(storeDetailDto);
+    }
+
+    @WebMethod(operationName = "inventories")
+    public Set<InventoryDto> getAllInventory(int storeId) {
+        return service.getAllInventoryDtoSet(storeId);
+    }
+
+    @WebMethod(operationName = "staffs")
+    public Set<StaffDto> getAllStaff(int storeID) {
+        return service.getAllStaff(storeID);
     }
 }

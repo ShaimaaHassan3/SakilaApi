@@ -70,3 +70,58 @@ Content-Type: text/xml
         </jets:newStore>
     </soap:Body>
 </soap:Envelope>
+
+### updateStore
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updateStore>
+            <arg0>
+            <id>4</id>
+        <address>
+          <id>3</id>
+        </address>
+        <lastUpdate>2006-02-15T04:57:12+02:00</lastUpdate>
+        <managerStaff>
+          <id>3</id>
+        </managerStaff>
+            </arg0>
+        </jets:updateStore>
+    </soap:Body>
+</soap:Envelope>
+### Get ALL inventories
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:inventories>
+            <arg0>2</arg0>
+        </jets:inventories>
+    </soap:Body>
+</soap:Envelope>
+### Get ALL staffs
+POST http://localhost:9090/SakilaApi/ws/store HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://storeServices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:staffs>
+            <arg0>2</arg0>
+        </jets:staffs>
+    </soap:Body>
+</soap:Envelope>
