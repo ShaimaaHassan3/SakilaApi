@@ -59,4 +59,10 @@ public class PaymentService {
     public PaymentDto getLastPayment(int customerId) {
         return modelMapper.map(paymentRepo.getLastPayment(customerId), PaymentDto.class);
     }
+
+    public Set<PaymentDto> getPaymentWithAmount(int customerID) {
+        Type type = new TypeToken<Set<PaymentDto>>() {
+        }.getType();
+        return modelMapper.map(paymentRepo.getPaymentWithAmount(customerID), type);
+    }
 }

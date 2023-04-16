@@ -57,4 +57,9 @@ public class PaymentServices {
         return service.getLastPayment(customerId);
     }
 
+    @WebMethod(operationName = "paymentAmount")
+    public Set<PaymentDto> getPaymentWithAmount(int customerId) {
+        return service.getPaymentWithAmount(customerId);
+    }
+
 }

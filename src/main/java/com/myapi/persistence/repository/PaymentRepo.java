@@ -16,5 +16,6 @@ public interface PaymentRepo {
     public Payment addPayment(Payment payment);
     public Payment updatePayment(Payment payment);
     public Payment getLastPayment(int customerID);
+    public Set<Payment> getPaymentWithAmount(int customerID);
 
 }

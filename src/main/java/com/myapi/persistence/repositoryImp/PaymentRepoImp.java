@@ -12,6 +12,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class PaymentRepoImp extends BaseRepoImp<Payment> implements PaymentRepo {
     EntityManager entityManager;
@@ -77,5 +78,13 @@ public class PaymentRepoImp extends BaseRepoImp<Payment> implements PaymentRepo 
         query.setParameter("customerId", customerID);
         query.setMaxResults(1);
         return (Payment) query.getSingleResult();
+    }
+
+    @Override
+    public Set<Payment> getPaymentWithAmount(int customerID) {
+        String queryString = "SELECT p FROM Payment p WHERE p.customer.id = :customerId AND p.amount > 5";
+        Query query = entityManager.createQuery(queryString);
+        query.setParameter("customerId", customerID);
+        return (Set<Payment>) query.getResultStream().collect(Collectors.toSet());
     }
 }
