@@ -28,3 +28,32 @@ Content-Type: text/xml
         </jets:getStaffByID>
     </soap:Body>
 </soap:Envelope>
+### addStaff
+POST http://localhost:9090/SakilaApi/ws/staff HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://staff.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:addStaff>
+            <arg0>
+            <id>4</id>
+            <address>
+                <id>1</id>
+            </address>
+            <storeStaff>
+              <id>1</id>
+            </storeStaff>
+            <active>true</active>
+              <email>Jon.Stephens@sakilastaff.com</email>
+              <firstName>Shaimaa</firstName>
+              <lastName>Hassan</lastName>
+              <lastUpdate>2006-02-15T03:57:16+02:00</lastUpdate>
+              <username>Jon</username>
+            </arg0>
+        </jets:addStaff>
+    </soap:Body>
+</soap:Envelope>
