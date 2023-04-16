@@ -11,19 +11,23 @@
             url-pattern="/ws/film" />
 
     <endpoint
-            name="FilmWebServices"
+            name="AddressServices"
             implementation="com.myapi.api.soapApi.addressservices.AddressServices"
             url-pattern="/ws/address" />
     <endpoint
-            name="FilmWebServices"
+            name="ActorServices"
             implementation="com.myapi.api.soapApi.actorServices.ActorServices"
             url-pattern="/ws/actor" />
     <endpoint
-            name="FilmWebServices"
+            name="StaffServices"
             implementation="com.myapi.api.soapApi.staff.StaffServices"
             url-pattern="/ws/staff" />
     <endpoint
-            name="FilmWebServices"
+            name="StoreServices"
             implementation="com.myapi.api.soapApi.storeServices.StoreServices"
             url-pattern="/ws/store" />
+    <endpoint
+            name="CategoryServices"
+            implementation="com.myapi.api.soapApi.categoryservices.CategoryServices"
+            url-pattern="/ws/category" />
 </endpoints>

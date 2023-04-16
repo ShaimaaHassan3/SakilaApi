@@ -1,10 +1,11 @@
-package com.myapi.persistence.repositoryImp;
+package com.myapi.persistence.repositoryImp.film;
 
 import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.Actor;
 import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.entities.film.Film;
 import com.myapi.persistence.repository.ActorRepo;
+import com.myapi.persistence.repositoryImp.BaseRepoImp;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 

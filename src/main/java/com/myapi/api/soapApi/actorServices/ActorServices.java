@@ -1,8 +1,8 @@
 package com.myapi.api.soapApi.actorServices;
 
-import com.myapi.dtos.ActorDto;
+import com.myapi.dtos.film.ActorDto;
 import com.myapi.dtos.film.FilmDto;
-import com.myapi.services.ActorService;
+import com.myapi.services.film.ActorService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebService;
 

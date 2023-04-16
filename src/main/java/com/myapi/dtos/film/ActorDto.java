@@ -1,4 +1,4 @@
-package com.myapi.dtos;
+package com.myapi.dtos.film;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
