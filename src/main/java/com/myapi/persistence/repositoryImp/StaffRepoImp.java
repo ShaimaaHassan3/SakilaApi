@@ -4,6 +4,7 @@ import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.Store;
 import com.myapi.persistence.entities.address.Address;
+import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.repository.AddressRepo;
 import com.myapi.persistence.repository.StaffRepo;
 import com.myapi.persistence.repository.StoreRepo;
@@ -11,6 +12,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 
 import java.util.Set;
+import java.util.stream.Collectors;
 
 public class StaffRepoImp extends BaseRepoImp<Staff> implements StaffRepo {
     EntityManager entityManager;
@@ -58,6 +60,14 @@ public class StaffRepoImp extends BaseRepoImp<Staff> implements StaffRepo {
         query.setParameter("fName", fName);
         query.setParameter("lName", lName);
         return (Staff) query.getSingleResult();
+    }
+
+    @Override
+    public Set<Rental> getAllRentalByStaff(Staff staff) {
+        String quaryString = "SELECT r FROM Rental r WHERE r.staff = :staff";
+        Query query = entityManager.createQuery(quaryString);
+        query.setParameter("staff", staff);
+        return (Set<Rental>) query.getResultStream().collect(Collectors.toSet());
     }
 
 }

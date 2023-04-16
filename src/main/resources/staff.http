@@ -102,3 +102,59 @@ Content-Type: text/xml
         </jets:StaffByName>
     </soap:Body>
 </soap:Envelope>
+### GetStaffByID
+POST http://localhost:9090/SakilaApi/ws/staff HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://staff.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getStaffByID>
+            <arg0>2</arg0>
+        </jets:getStaffByID>
+    </soap:Body>
+</soap:Envelope>
+### getAllRentalByStaff
+POST http://localhost:9090/SakilaApi/ws/staff HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://staff.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getAllRentalByStaff>
+            <arg0>
+            <active>true</active>
+        <address>
+          <address>1411 Lillydale Drive</address>
+          <city>
+            <city>Woodridge</city>
+            <id>576</id>
+            <lastUpdate>2006-02-15T04:45:25+02:00</lastUpdate>
+          </city>
+          <district>QLD</district>
+          <id>4</id>
+          <lastUpdate>2014-09-25T23:30:09+02:00</lastUpdate>
+          <location>AAAAAAEBAAAAWw3kNB8mY0BC1q5kIqI7wA==</location>
+          <phone>6172235589</phone>
+          <postalCode></postalCode>
+        </address>
+        <email>Jon.Stephens@sakilastaff.com</email>
+        <firstName>Jon</firstName>
+        <id>2</id>
+        <lastName>Stephens</lastName>
+        <lastUpdate>2006-02-15T03:57:16+02:00</lastUpdate>
+        <storeStaff>
+          <id>2</id>
+          <lastUpdate>2006-02-15T04:57:12+02:00</lastUpdate>
+        </storeStaff>
+        <username>Jon</username>
+            </arg0>
+        </jets:getAllRentalByStaff>
+    </soap:Body>
+</soap:Envelope>

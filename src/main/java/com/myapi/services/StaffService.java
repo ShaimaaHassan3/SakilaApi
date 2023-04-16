@@ -2,7 +2,9 @@ package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.StaffDto;
+import com.myapi.dtos.customer.RentalDto;
 import com.myapi.persistence.entities.Staff;
+import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.repository.StaffRepo;
 import com.myapi.persistence.repositoryImp.StaffRepoImp;
 import org.modelmapper.ModelMapper;
@@ -41,6 +43,13 @@ public class StaffService {
 
     public StaffDto getStaffByName(String fName, String lName) {
         return modelMapper.map(staffRepo.getStaffByName(fName, lName), StaffDto.class);
+    }
+
+    public Set<RentalDto> getAllRentalByStaff(StaffDto staff) {
+        Staff staff1 = modelMapper.map(staff,Staff.class);
+        Type type = new TypeToken<Set<RentalDto>>() {
+        }.getType();
+        return modelMapper.map(staffRepo.getAllRentalByStaff(staff1), type);
     }
 
 }
