@@ -5,9 +5,8 @@ import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.StoreDto;
 import com.myapi.dtos.address.AddressDto;
 import com.myapi.dtos.customer.CustomerDto;
-import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.address.Address;
-import com.myapi.persistence.repositoryImp.AddressRepoImp;
+import com.myapi.persistence.repositoryImp.address.AddressRepoImp;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;

@@ -1,13 +1,15 @@
-package com.myapi.persistence.repositoryImp;
+package com.myapi.persistence.repositoryImp.customer;
 
 import com.myapi.persistence.PersistenceManager;
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.customer.Customer;
 import com.myapi.persistence.entities.customer.Payment;
 import com.myapi.persistence.entities.customer.Rental;
-import com.myapi.persistence.repository.CustomerRepo;
-import com.myapi.persistence.repository.PaymentRepo;
+import com.myapi.persistence.repository.customer.CustomerRepo;
+import com.myapi.persistence.repository.customer.PaymentRepo;
 import com.myapi.persistence.repository.StaffRepo;
+import com.myapi.persistence.repositoryImp.BaseRepoImp;
+import com.myapi.persistence.repositoryImp.StaffRepoImp;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 

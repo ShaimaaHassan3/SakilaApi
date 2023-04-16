@@ -1,4 +1,4 @@
-package com.myapi.persistence.repository;
+package com.myapi.persistence.repository.customer;
 
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.customer.Customer;

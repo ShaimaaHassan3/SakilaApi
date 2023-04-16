@@ -34,4 +34,8 @@
             name="CategoryServices"
             implementation="com.myapi.api.soapApi.paymentservices.PaymentServices"
             url-pattern="/ws/payment"/>
+    <endpoint
+            name="RentalServices"
+            implementation="com.myapi.api.soapApi.rentalservices.RentalServices"
+            url-pattern="/ws/rental"/>
 </endpoints>

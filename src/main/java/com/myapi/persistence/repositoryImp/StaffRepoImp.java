@@ -6,9 +6,10 @@ import com.myapi.persistence.entities.Store;
 import com.myapi.persistence.entities.address.Address;
 import com.myapi.persistence.entities.customer.Payment;
 import com.myapi.persistence.entities.customer.Rental;
-import com.myapi.persistence.repository.AddressRepo;
+import com.myapi.persistence.repository.address.AddressRepo;
 import com.myapi.persistence.repository.StaffRepo;
 import com.myapi.persistence.repository.StoreRepo;
+import com.myapi.persistence.repositoryImp.address.AddressRepoImp;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 

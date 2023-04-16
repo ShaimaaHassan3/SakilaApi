@@ -4,7 +4,7 @@ import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.film.ActorDto;
 import com.myapi.dtos.film.FilmDto;
 import com.myapi.persistence.entities.Actor;
-import com.myapi.persistence.repository.ActorRepo;
+import com.myapi.persistence.repository.film.ActorRepo;
 import com.myapi.persistence.repositoryImp.film.ActorRepoImp;
 import org.modelmapper.ModelMapper;
 
