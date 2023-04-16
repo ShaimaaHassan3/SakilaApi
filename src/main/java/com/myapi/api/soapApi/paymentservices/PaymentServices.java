@@ -1,5 +1,6 @@
 package com.myapi.api.soapApi.paymentservices;
 
+import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.services.PaymentService;
@@ -19,12 +20,18 @@ public class PaymentServices {
     public PaymentDto getPayment(int paymentID) {
         return service.getPaymentById(paymentID);
     }
+
     @WebMethod(operationName = "customer")
     public CustomerDto getCustomerPayment(int paymentID) {
         return service.getCustomerPayment(paymentID);
     }
+
     @WebMethod(operationName = "payments")
     public Set<PaymentDto> getAllPayments() {
         return service.getAllPayment();
+    }
+    @WebMethod(operationName = "staff")
+    public StaffDto getStaffProcessedPayment(int paymentID) {
+        return service.getStaffProcessedPayment(paymentID);
     }
 }

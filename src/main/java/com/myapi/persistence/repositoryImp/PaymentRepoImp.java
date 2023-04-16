@@ -1,5 +1,6 @@
 package com.myapi.persistence.repositoryImp;
 
+import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.customer.Customer;
 import com.myapi.persistence.entities.customer.Payment;
 import com.myapi.persistence.repository.PaymentRepo;
@@ -21,5 +22,11 @@ public class PaymentRepoImp extends BaseRepoImp<Payment> implements PaymentRepo 
     @Override
     public Set<Payment> getAllPayments() {
         return getAll(new Payment());
+    }
+
+    @Override
+    public Staff getStaffProcessedPayment(int paymentId) {
+        Payment payment = getPaymentById(paymentId);
+        return payment.getStaff();
     }
 }

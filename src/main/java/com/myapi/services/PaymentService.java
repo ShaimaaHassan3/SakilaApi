@@ -1,6 +1,7 @@
 package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
+import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.address.AddressDto;
 import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.dtos.customer.PaymentDto;
@@ -33,5 +34,9 @@ public class PaymentService {
         Type type = new TypeToken<Set<PaymentDto>>() {
         }.getType();
         return modelMapper.map(paymentRepo.getAllPayments(), type);
+    }
+
+    public StaffDto getStaffProcessedPayment(int paymentID) {
+       return modelMapper.map(paymentRepo.getStaffProcessedPayment(paymentID), StaffDto.class);
     }
 }
