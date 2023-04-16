@@ -31,4 +31,10 @@ public class StoreServices {
     public StaffDto getManager(int ID) {
         return service.gatManager(ID);
     }
+
+    @WebMethod(operationName = "newStore")
+    public StoreDetailDto addStore(StoreDetailDto storeDetailDto) {
+        System.out.println("Store : " + storeDetailDto);
+        return service.addStore(storeDetailDto);
+    }
 }

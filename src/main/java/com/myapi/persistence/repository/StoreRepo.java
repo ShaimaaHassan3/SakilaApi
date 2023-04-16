@@ -10,5 +10,6 @@ public interface StoreRepo {
     public Store getStoreById(int ID);
     public Set<Store> getAllStories();
     public Staff getManager(int storeId);
+    public Store addStore(Store store);
 
 }
