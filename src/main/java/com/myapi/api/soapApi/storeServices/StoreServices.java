@@ -38,13 +38,20 @@ public class StoreServices {
         System.out.println("Store : " + storeDetailDto);
         return service.addStore(storeDetailDto);
     }
+
     @WebMethod(operationName = "updateStore")
     public StoreDetailDto updateStore(StoreDetailDto storeDetailDto) {
         System.out.println("Store : " + storeDetailDto);
         return service.updateStore(storeDetailDto);
     }
-    @WebMethod(operationName = "inventories" )
+
+    @WebMethod(operationName = "inventories")
     public Set<InventoryDto> getAllInventory(int storeId) {
         return service.getAllInventoryDtoSet(storeId);
+    }
+
+    @WebMethod(operationName = "staffs")
+    public Set<StaffDto> getAllStaff(int storeID) {
+        return service.getAllStaff(storeID);
     }
 }
