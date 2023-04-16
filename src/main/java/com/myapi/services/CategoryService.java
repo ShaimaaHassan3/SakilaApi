@@ -17,4 +17,7 @@ public class CategoryService {
     public CategoryDto getCategoryById(int catID) {
         return modelMapper.map(categoryRepo.getCategoryById(catID), CategoryDto.class);
     }
+    public CategoryDto getCategoryByName(String catName) {
+        return modelMapper.map(categoryRepo.getCategoryByName(catName), CategoryDto.class);
+    }
 }

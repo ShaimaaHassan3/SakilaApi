@@ -14,3 +14,18 @@ Content-Type: text/xml
         </jets:getCategoryById>
     </soap:Body>
 </soap:Envelope>
+### Get Category By Name
+POST http://localhost:9090/SakilaApi/ws/category HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://categoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:getCategoryByName>
+            <arg0>Action</arg0>
+        </jets:getCategoryByName>
+    </soap:Body>
+</soap:Envelope>

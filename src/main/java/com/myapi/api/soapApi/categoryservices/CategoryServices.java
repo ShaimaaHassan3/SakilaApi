@@ -15,4 +15,7 @@ public class CategoryServices {
     public CategoryDto getCategoryById(int catID) {
         return service.getCategoryById(catID);
     }
+    public CategoryDto getCategoryByName(String catName) {
+        return service.getCategoryByName(catName);
+    }
 }
