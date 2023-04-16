@@ -3,6 +3,7 @@ package com.myapi.persistence.repository;
 import com.myapi.persistence.entities.Staff;
 import com.myapi.persistence.entities.customer.Customer;
 import com.myapi.persistence.entities.customer.Payment;
+import com.myapi.persistence.entities.customer.Rental;
 
 import java.util.Set;
 
@@ -11,5 +12,7 @@ public interface PaymentRepo {
     public Customer getCustomerPayment(int paymentID);
     public Set<Payment> getAllPayments();
     public Staff getStaffProcessedPayment(int paymentId);
+    public Rental getRentalApplied(int paymentId);
+    public Payment addPayment(Payment payment);
 
 }
