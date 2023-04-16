@@ -22,12 +22,19 @@ public class StaffServices {
     public StaffDto getStaffByID(int staffID) {
         return service.getStaffById(staffID);
     }
-   @WebMethod(operationName = "Add")
+
+    @WebMethod(operationName = "Add")
     public StaffDto addStaff(StaffDto staffDto) {
         return service.addStaff(staffDto);
     }
+
     @WebMethod(operationName = "Update")
     public StaffDto updateStaff(StaffDto staffDto) {
         return service.updateStaff(staffDto);
+    }
+
+    @WebMethod(operationName = "StaffByName")
+    public StaffDto getStaffByName(String fName, String lName) {
+        return service.getStaffByName(fName, lName);
     }
 }
