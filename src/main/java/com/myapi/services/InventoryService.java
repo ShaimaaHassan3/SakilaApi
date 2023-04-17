@@ -5,6 +5,7 @@ import com.myapi.dtos.InventoryDto;
 import com.myapi.dtos.StoreDto;
 import com.myapi.dtos.address.AddressDto;
 import com.myapi.dtos.film.FilmDto;
+import com.myapi.persistence.entities.Inventory;
 import com.myapi.persistence.repository.film.InventoryRepo;
 import com.myapi.persistence.repositoryImp.film.InventoryRepoImp;
 import org.modelmapper.ModelMapper;
@@ -37,5 +38,10 @@ public class InventoryService {
 
     public StoreDto getStore(int inventoryId) {
         return modelMapper.map(inventoryRepo.getStore(inventoryId), StoreDto.class);
+    }
+
+    public InventoryDto addInventory(InventoryDto inventoryDto) {
+        Inventory inventory = modelMapper.map(inventoryDto, Inventory.class);
+        return modelMapper.map(inventoryRepo.addInventory(inventory), InventoryDto.class);
     }
 }

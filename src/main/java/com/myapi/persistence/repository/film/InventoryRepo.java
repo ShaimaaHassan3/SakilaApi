@@ -11,5 +11,6 @@ public interface InventoryRepo {
     public Film getFilm(int inventoryId);
     public Set<Inventory> getAllInventory();
     public Store getStore(int inventoryId);
+    public Inventory addInventory(Inventory inventory);
 
 }
