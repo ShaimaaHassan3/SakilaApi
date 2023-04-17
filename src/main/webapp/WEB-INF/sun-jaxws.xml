@@ -42,4 +42,8 @@
             name="RentalServices"
             implementation="com.myapi.api.soapApi.inventoryservices.InventoryServices"
             url-pattern="/ws/inventory"/>
+    <endpoint
+            name="LanguageServices"
+            implementation="com.myapi.api.soapApi.languageservices.LanguageServices"
+            url-pattern="/ws/language"/>
 </endpoints>

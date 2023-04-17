@@ -3,7 +3,7 @@ package com.myapi.api.soapApi.customerservices;
 import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.dtos.film.FilmDto;
 import com.myapi.dtos.customer.PaymentDto;
-import com.myapi.services.CustomerService;
+import com.myapi.services.customer.CustomerService;
 import jakarta.jws.WebService;
 
 import java.util.Set;
