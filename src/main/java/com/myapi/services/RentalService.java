@@ -1,6 +1,8 @@
 package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
+import com.myapi.dtos.StaffDto;
+import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.dtos.customer.PaymentDto;
 import com.myapi.dtos.customer.RentalDto;
 import com.myapi.persistence.repository.customer.RentalRepo;
@@ -27,5 +29,13 @@ public class RentalService {
         Type type = new TypeToken<Set<RentalDto>>() {
         }.getType();
         return modelMapper.map(rentalRepo.getAllRental(), type);
+    }
+
+    public CustomerDto getCustomerWhoRental(int rentalId) {
+        return modelMapper.map(rentalRepo.rentalCustomer(rentalId), CustomerDto.class);
+    }
+
+    public StaffDto getStaffRental(int rentalId) {
+        return modelMapper.map(rentalRepo.rentalStaff(rentalId), StaffDto.class);
     }
 }

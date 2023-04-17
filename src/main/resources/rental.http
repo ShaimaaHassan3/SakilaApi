@@ -29,3 +29,34 @@ Content-Type: text/xml
         </jets:rentals>
     </soap:Body>
 </soap:Envelope>
+### Get Customer
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:customerRental>
+            <arg0>2</arg0>
+        </jets:customerRental>
+    </soap:Body>
+</soap:Envelope>
+### Get Staff
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:staffRental>
+            <arg0>2</arg0>
+        </jets:staffRental>
+    </soap:Body>
+</soap:Envelope>
+
