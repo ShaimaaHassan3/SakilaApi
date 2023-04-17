@@ -14,3 +14,138 @@ Content-Type: text/xml
         </jets:rental>
     </soap:Body>
 </soap:Envelope>
+### Get Rentals
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:rentals>
+            <arg0>2</arg0>
+        </jets:rentals>
+    </soap:Body>
+</soap:Envelope>
+### Get Customer
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:customerRental>
+            <arg0>2</arg0>
+        </jets:customerRental>
+    </soap:Body>
+</soap:Envelope>
+### Get Staff
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:staffRental>
+            <arg0>2</arg0>
+        </jets:staffRental>
+    </soap:Body>
+</soap:Envelope>
+### Get Inventory
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:inventoryRental>
+            <arg0>2</arg0>
+        </jets:inventoryRental>
+    </soap:Body>
+</soap:Envelope>
+### Get Rental Date
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:rentalDate>
+            <arg0>2</arg0>
+        </jets:rentalDate>
+    </soap:Body>
+</soap:Envelope>
+### Add New Rental
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:newRental>
+            <arg0>
+            <inventory>
+            <id>333</id>
+            </inventory>
+             <staffDto> 
+             <id>1</id>
+             </staffDto>
+             <lastUpdate>2006-02-15T21:30:53+02:00</lastUpdate>
+        <rentalDate>2005-05-24T22:54:33+03:00</rentalDate>
+        <returnDate>2005-05-28T19:40:33+03:00</returnDate>
+        <lastUpdate>2006-02-15T04:57:12+02:00</lastUpdate>
+         <customerDto>
+                    <id>3</id>
+                  </customerDto>
+            </arg0>
+        </jets:newRental>
+    </soap:Body>
+</soap:Envelope>
+### update New Rental
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updateRental>
+            <arg0>
+             <id>1</id>
+            <inventory>
+            <id>333</id>
+            </inventory>
+             <staffDto> 
+             <id>1</id>
+             </staffDto>
+             <lastUpdate>2006-02-15T21:30:53+02:00</lastUpdate>
+        <rentalDate>2005-05-24T22:54:33+03:00</rentalDate>
+        <returnDate>2005-05-28T19:40:33+03:00</returnDate>
+        <lastUpdate>2006-02-15T04:57:12+02:00</lastUpdate>
+         <customerDto>
+                    <id>3</id>
+                  </customerDto>
+            </arg0>
+        </jets:updateRental>
+    </soap:Body>
+</soap:Envelope>
+

@@ -128,7 +128,7 @@ Content-Type: text/xml
 
     <soap:Body>
         <jets:Rentals>
-           <arg0>3</arg0>
+           <arg0>1</arg0>
         </jets:Rentals>
     </soap:Body>
 </soap:Envelope>
