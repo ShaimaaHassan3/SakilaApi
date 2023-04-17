@@ -63,5 +63,19 @@ public class RentalRepoImp extends BaseRepoImp<Rental> implements RentalRepo {
         return save(rental);
     }
 
+    @Override
+    public Rental updateRental(Rental rental) {
+        CustomerRepo customerRepo = new CustomerRepoImp();
+        StaffRepo staffRepo = new StaffRepoImp();
+        InventoryRepo inventoryRepo = new InventoryRepoImp();
+        Customer customer = customerRepo.getCustomerById(rental.getCustomer().getId());
+        Staff staff = staffRepo.getStaffById(rental.getStaff().getId());
+        Inventory inventory = inventoryRepo.getInventory(rental.getInventory().getId());
+        rental.setCustomer(customer);
+        rental.setStaff(staff);
+        rental.setInventory(inventory);
+        return update(rental);
+    }
+
 
 }

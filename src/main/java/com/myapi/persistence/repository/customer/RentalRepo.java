@@ -17,5 +17,6 @@ public interface RentalRepo {
     public Inventory rentalInventory(int rentalId);
     public Date getRenatlDate(int rentalId);
     public Rental addRental(Rental rental);
+    public Rental updateRental(Rental rental);
 
 }

@@ -55,4 +55,9 @@ public class RentalServices {
         System.out.println("Rental : " + rentalDto);
         return service.addRental(rentalDto);
     }
+    @WebMethod(operationName = "updateRental")
+    public RentalDto updateRentalDto(RentalDto rentalDto) {
+        System.out.println("Rental : " + rentalDto);
+        return service.updateRental(rentalDto);
+    }
 }

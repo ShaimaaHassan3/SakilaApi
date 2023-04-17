@@ -54,4 +54,8 @@ public class RentalService {
         Rental rental = modelMapper.map(rentalDto, Rental.class);
         return modelMapper.map(rentalRepo.addRental(rental), RentalDto.class);
     }
+    public RentalDto updateRental(RentalDto rentalDto) {
+        Rental rental = modelMapper.map(rentalDto, Rental.class);
+        return modelMapper.map(rentalRepo.updateRental(rental), RentalDto.class);
+    }
 }

@@ -118,4 +118,34 @@ Content-Type: text/xml
         </jets:newRental>
     </soap:Body>
 </soap:Envelope>
+### update New Rental
+POST http://localhost:9090/SakilaApi/ws/rental HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://rentalservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updateRental>
+            <arg0>
+             <id>1</id>
+            <inventory>
+            <id>333</id>
+            </inventory>
+             <staffDto> 
+             <id>1</id>
+             </staffDto>
+             <lastUpdate>2006-02-15T21:30:53+02:00</lastUpdate>
+        <rentalDate>2005-05-24T22:54:33+03:00</rentalDate>
+        <returnDate>2005-05-28T19:40:33+03:00</returnDate>
+        <lastUpdate>2006-02-15T04:57:12+02:00</lastUpdate>
+         <customerDto>
+                    <id>3</id>
+                  </customerDto>
+            </arg0>
+        </jets:updateRental>
+    </soap:Body>
+</soap:Envelope>
 
