@@ -38,4 +38,8 @@
             name="RentalServices"
             implementation="com.myapi.api.soapApi.rentalservices.RentalServices"
             url-pattern="/ws/rental"/>
+    <endpoint
+            name="RentalServices"
+            implementation="com.myapi.api.soapApi.inventoryservices.InventoryServices"
+            url-pattern="/ws/inventory"/>
 </endpoints>
