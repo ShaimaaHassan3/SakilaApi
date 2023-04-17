@@ -1,4 +1,4 @@
-package com.myapi.persistence.repository;
+package com.myapi.persistence.repository.address;
 
 import com.myapi.persistence.entities.address.Address;
 

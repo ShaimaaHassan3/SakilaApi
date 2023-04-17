@@ -13,6 +13,7 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 public class InventoryDto implements Serializable {
+    private Integer id;
     private FilmDto film;
     private  StoreDto store;
     private Date lastUpdate;

@@ -1,0 +1,107 @@
+### Inventory
+### Get Inventory
+POST http://localhost:9090/SakilaApi/ws/inventory HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://inventoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:inventory>
+            <arg0>411</arg0>
+        </jets:inventory>
+    </soap:Body>
+</soap:Envelope>
+### Get Film
+POST http://localhost:9090/SakilaApi/ws/inventory HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://inventoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:film>
+            <arg0>3</arg0>
+        </jets:film>
+    </soap:Body>
+</soap:Envelope>
+### Get Inventories
+POST http://localhost:9090/SakilaApi/ws/inventory HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://inventoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:inventories>
+        </jets:inventories>
+    </soap:Body>
+</soap:Envelope>
+### Get Store
+POST http://localhost:9090/SakilaApi/ws/inventory HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://inventoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:store>
+           <arg0>3</arg0>
+        </jets:store>
+    </soap:Body>
+</soap:Envelope>
+### Add Inventory
+POST http://localhost:9090/SakilaApi/ws/inventory HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://inventoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:newInventory>
+            <arg0>
+            <film>
+             <id>1</id>
+            </film>
+             <lastUpdate>2006-02-15T05:09:17+02:00</lastUpdate>
+            <store>
+                <id>1</id>
+             </store>
+            </arg0>
+        </jets:newInventory>
+    </soap:Body>
+</soap:Envelope>
+### Update Inventory
+POST http://localhost:9090/SakilaApi/ws/inventory HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://inventoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updateInventory>
+            <arg0>
+            <id>1</id>
+            <film>
+             <id>1</id>
+            </film>
+             <lastUpdate>2006-02-15T05:09:17+02:00</lastUpdate>
+            <store>
+                <id>2</id>
+             </store>
+            </arg0>
+        </jets:updateInventory>
+    </soap:Body>
+</soap:Envelope>

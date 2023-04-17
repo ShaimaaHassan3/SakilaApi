@@ -1,9 +1,8 @@
-package com.myapi.persistence.repositoryImp;
+package com.myapi.persistence.repositoryImp.address;
 
-import com.myapi.persistence.entities.address.Address;
 import com.myapi.persistence.entities.address.City;
-import com.myapi.persistence.repository.AddressRepo;
-import com.myapi.persistence.repository.CityRepo;
+import com.myapi.persistence.repository.address.CityRepo;
+import com.myapi.persistence.repositoryImp.BaseRepoImp;
 
 public class CityRepoImp extends BaseRepoImp<City> implements CityRepo {
 

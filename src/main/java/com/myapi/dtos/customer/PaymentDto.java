@@ -15,10 +15,11 @@ import java.util.Date;
 @Data
 @NoArgsConstructor
 public class PaymentDto implements Serializable {
-    private  Integer id;
+    private Integer id;
     private StaffDto staff;
     private RentalDto rental;
-    private  BigDecimal amount;
+    private BigDecimal amount;
     private Date paymentDate;
-    private  Date lastUpdate;
+    private Date lastUpdate;
+    private CustomerDto customerDto;
 }

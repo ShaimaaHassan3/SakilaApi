@@ -1,6 +1,7 @@
 package com.myapi.dtos.customer;
 
 import com.myapi.dtos.InventoryDto;
+import com.myapi.dtos.StaffDto;
 import com.myapi.persistence.entities.customer.Rental;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,4 +20,6 @@ public class RentalDto implements Serializable {
     private InventoryDto inventory;
     private Date returnDate;
     private Date lastUpdate;
+    private CustomerDto customerDto;
+    private StaffDto staffDto;
 }
