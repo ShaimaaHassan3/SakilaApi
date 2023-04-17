@@ -4,8 +4,7 @@ import com.myapi.dtos.InventoryDto;
 import com.myapi.dtos.StaffDto;
 import com.myapi.dtos.customer.CustomerDto;
 import com.myapi.dtos.customer.RentalDto;
-import com.myapi.persistence.entities.customer.Rental;
-import com.myapi.services.RentalService;
+import com.myapi.services.customer.RentalService;
 import jakarta.jws.WebMethod;
 import jakarta.jws.WebService;
 

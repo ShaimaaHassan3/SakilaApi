@@ -1,4 +1,4 @@
-package com.myapi.services;
+package com.myapi.services.customer;
 
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.InventoryDto;
