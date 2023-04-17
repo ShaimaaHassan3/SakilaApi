@@ -6,10 +6,11 @@ import com.myapi.persistence.entities.customer.Customer;
 import com.myapi.persistence.entities.customer.Rental;
 import com.myapi.persistence.repository.StaffRepo;
 import com.myapi.persistence.repository.customer.CustomerRepo;
-import com.myapi.persistence.repository.customer.InventoryRepo;
+import com.myapi.persistence.repository.film.InventoryRepo;
 import com.myapi.persistence.repository.customer.RentalRepo;
 import com.myapi.persistence.repositoryImp.BaseRepoImp;
 import com.myapi.persistence.repositoryImp.StaffRepoImp;
+import com.myapi.persistence.repositoryImp.film.InventoryRepoImp;
 
 import java.util.Date;
 import java.util.Set;
