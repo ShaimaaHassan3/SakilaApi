@@ -12,5 +12,6 @@ public interface InventoryRepo {
     public Set<Inventory> getAllInventory();
     public Store getStore(int inventoryId);
     public Inventory addInventory(Inventory inventory);
+    public Inventory updateInventory(Inventory inventory);
 
 }

@@ -39,7 +39,11 @@ public class InventoryServices {
 
     @WebMethod(operationName = "newInventory")
     public InventoryDto addInventory(InventoryDto inventory) {
-        System.out.println("New Inventory " + inventory);
         return service.addInventory(inventory);
+    }
+
+    @WebMethod(operationName = "updateInventory")
+    public InventoryDto updateInventory(InventoryDto inventory) {
+        return service.updateInventory(inventory);
     }
 }

@@ -44,4 +44,15 @@ public class InventoryRepoImp extends BaseRepoImp<Inventory> implements Inventor
         inventory.setStore(store);
         return save(inventory);
     }
+
+    @Override
+    public Inventory updateInventory(Inventory inventory) {
+        FilmRepo filmRepo = new FilmRepoImp();
+        StoreRepo storeRepo = new StoreRepoImp();
+        Film film = filmRepo.getFilmById(inventory.getFilm().getId());
+        Store store = storeRepo.getStoreById(inventory.getStore().getId());
+        inventory.setFilm(film);
+        inventory.setStore(store);
+        return update(inventory);
+    }
 }

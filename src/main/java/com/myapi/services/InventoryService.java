@@ -44,4 +44,8 @@ public class InventoryService {
         Inventory inventory = modelMapper.map(inventoryDto, Inventory.class);
         return modelMapper.map(inventoryRepo.addInventory(inventory), InventoryDto.class);
     }
+    public InventoryDto updateInventory(InventoryDto inventoryDto) {
+        Inventory inventory = modelMapper.map(inventoryDto, Inventory.class);
+        return modelMapper.map(inventoryRepo.updateInventory(inventory), InventoryDto.class);
+    }
 }

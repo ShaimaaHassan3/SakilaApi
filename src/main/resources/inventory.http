@@ -81,3 +81,27 @@ Content-Type: text/xml
         </jets:newInventory>
     </soap:Body>
 </soap:Envelope>
+### Update Inventory
+POST http://localhost:9090/SakilaApi/ws/inventory HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://inventoryservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updateInventory>
+            <arg0>
+            <id>1</id>
+            <film>
+             <id>1</id>
+            </film>
+             <lastUpdate>2006-02-15T05:09:17+02:00</lastUpdate>
+            <store>
+                <id>2</id>
+             </store>
+            </arg0>
+        </jets:updateInventory>
+    </soap:Body>
+</soap:Envelope>
