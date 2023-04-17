@@ -21,12 +21,17 @@ public class LanguageService {
     }
 
     public LanguageDto getLanguage(String languageName) {
-        return modelMapper.map(languageRepo.getLanguageById(languageName), LanguageDto.class);
+        return modelMapper.map(languageRepo.getLanguageByName(languageName), LanguageDto.class);
     }
 
     public Set<LanguageDto> getAllLanguage() {
         Type type = new TypeToken<Set<LanguageDto>>() {
         }.getType();
         return modelMapper.map(languageRepo.getAllLanguage(), type);
+    }
+
+    public LanguageDto addLanguage(LanguageDto languageDto) {
+        Language language = modelMapper.map(languageDto, Language.class);
+        return modelMapper.map(languageRepo.addLanguage(language), LanguageDto.class);
     }
 }

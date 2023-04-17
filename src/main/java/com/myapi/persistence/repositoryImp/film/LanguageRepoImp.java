@@ -20,7 +20,7 @@ public class LanguageRepoImp extends BaseRepoImp<Language> implements LanguageRe
     }
 
     @Override
-    public Language getLanguageById(String languageName) {
+    public Language getLanguageByName(String languageName) {
         String queryString = "from Language l where l.name = : languageName";
         Query query = entityManager.createQuery(queryString);
         query.setParameter("languageName", languageName);
@@ -30,5 +30,10 @@ public class LanguageRepoImp extends BaseRepoImp<Language> implements LanguageRe
     @Override
     public Set<Language> getAllLanguage() {
         return getAll(new Language());
+    }
+
+    @Override
+    public Language addLanguage(Language language) {
+        return save(language);
     }
 }

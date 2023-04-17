@@ -19,8 +19,14 @@ public class LanguageServices {
     public LanguageDto getLanguage(String languageName) {
         return service.getLanguage(languageName);
     }
+
     @WebMethod(operationName = "languages")
     public Set<LanguageDto> getAllLanguage() {
         return service.getAllLanguage();
+    }
+
+    @WebMethod(operationName = "newLanguage")
+    public LanguageDto addLanguage(LanguageDto languageDto) {
+        return service.addLanguage(languageDto);
     }
 }
