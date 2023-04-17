@@ -29,4 +29,9 @@ public class LanguageServices {
     public LanguageDto addLanguage(LanguageDto languageDto) {
         return service.addLanguage(languageDto);
     }
+
+    @WebMethod(operationName = "updateLanguage")
+    public LanguageDto updateLanguage(LanguageDto languageDto) {
+        return service.updateLanguage(languageDto);
+    }
 }

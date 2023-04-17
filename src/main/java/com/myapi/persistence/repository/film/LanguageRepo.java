@@ -8,4 +8,5 @@ public interface LanguageRepo {
     public Language getLanguageByName(String languageName);
     public Set<Language> getAllLanguage();
     public Language addLanguage(Language language);
+    public Language updateLanguage(Language language);
 }

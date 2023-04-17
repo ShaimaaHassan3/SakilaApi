@@ -34,4 +34,8 @@ public class LanguageService {
         Language language = modelMapper.map(languageDto, Language.class);
         return modelMapper.map(languageRepo.addLanguage(language), LanguageDto.class);
     }
+    public LanguageDto updateLanguage(LanguageDto languageDto) {
+        Language language = modelMapper.map(languageDto, Language.class);
+        return modelMapper.map(languageRepo.updateLanguage(language), LanguageDto.class);
+    }
 }

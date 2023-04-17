@@ -28,3 +28,42 @@ Content-Type: text/xml
         </jets:languages>
     </soap:Body>
 </soap:Envelope>
+### Add new Language
+POST http://localhost:9090/SakilaApi/ws/language HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://languageservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:newLanguage>
+            <arg0>
+              <id>7</id>
+        <lastUpdate>2006-02-15T05:02:19+02:00</lastUpdate>
+        <name>Spanish</name> 
+            </arg0>
+        </jets:newLanguage>
+    </soap:Body>
+</soap:Envelope>
+### Update Language
+POST http://localhost:9090/SakilaApi/ws/language HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://languageservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:updateLanguage>
+            <arg0>
+              <id>7</id>
+        <lastUpdate>2006-02-15T05:02:19+02:00</lastUpdate>
+        <name>Spanish2</name> 
+            </arg0>
+        </jets:updateLanguage>
+    </soap:Body>
+</soap:Envelope>
+    

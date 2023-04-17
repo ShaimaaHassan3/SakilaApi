@@ -36,4 +36,9 @@ public class LanguageRepoImp extends BaseRepoImp<Language> implements LanguageRe
     public Language addLanguage(Language language) {
         return save(language);
     }
+
+    @Override
+    public Language updateLanguage(Language language) {
+        return update(language);
+    }
 }
