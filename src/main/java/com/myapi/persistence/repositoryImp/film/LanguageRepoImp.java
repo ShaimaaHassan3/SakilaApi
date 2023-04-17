@@ -19,6 +19,10 @@ public class LanguageRepoImp extends BaseRepoImp<Language> implements LanguageRe
         entityManager = PersistenceManager.getInstance().getEntityManagerFactory().createEntityManager();
     }
 
+    public Language getLanguageById(int languageId) {
+        return getById(languageId);
+    }
+
     @Override
     public Language getLanguageByName(String languageName) {
         String queryString = "from Language l where l.name = : languageName";
