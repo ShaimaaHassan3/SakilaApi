@@ -11,10 +11,9 @@ import com.myapi.persistence.entities.film.FilmActor;
 import com.myapi.persistence.entities.film.FilmCategory;
 import com.myapi.persistence.entities.film.Language;
 import com.myapi.persistence.repository.film.FilmRepo;
-import com.myapi.persistence.repository.film.LanguageRepo;
 import com.myapi.persistence.repositoryImp.film.FilmRepoImp;
 import com.myapi.persistence.repositoryImp.film.LanguageRepoImp;
-import com.myapi.services.util.exception.NotFoundException;
+import com.myapi.services.util.exception.HandelException;
 import org.modelmapper.ModelMapper;
 
 import java.lang.reflect.Type;
@@ -36,26 +35,26 @@ public class FilmService implements FilmServicesIn {
         return modelMapper.map(filmRepo.getAllFilms(), type);
     }
 
-    public FilmDto getFilmById(int id) throws NotFoundException {
+    public FilmDto getFilmById(int id) throws HandelException {
         FilmDto filmDto;
         try {
             Film filmDto1 = filmRepo.getFilmById(id);
             if (filmDto1 == null)
-                throw new NotFoundException("Sorry But This Film Out Of Store");
+                throw new HandelException("Sorry But This Film Out Of Store");
             filmDto = modelMapper.map(filmRepo.getFilmById(id), FilmDto.class);
             return filmDto;
         } catch (NullPointerException e) {
-            throw new NotFoundException("Sorry But This Film Out Of Store");
+            throw new HandelException("Sorry But This Film Out Of Store");
         }
 
     }
 
-    public FilmDto saveFilm(FilmDto filmDto) throws NotFoundException {
+    public FilmDto saveFilm(FilmDto filmDto) throws HandelException, IllegalAccessException {
         LanguageRepoImp languageRepo = new LanguageRepoImp();
         Language language = languageRepo.getLanguageById(filmDto.getLanguage().getId());
         System.out.println("language" + language);
         if (language == null)
-            throw new NotFoundException("Sorry But This Language did not Exist");
+            throw new HandelException("Sorry But This Language did not Exist");
         return modelMapper.map(filmRepo.saveFilm(modelMapper.map(filmDto, Film.class)), FilmDto.class);
     }
 
@@ -63,19 +62,19 @@ public class FilmService implements FilmServicesIn {
         filmRepo.deleteFilm(id);
     }
 
-    public FilmDto updateFilm(FilmDto film) throws NotFoundException {
+    public FilmDto updateFilm(FilmDto film) throws HandelException {
         LanguageRepoImp languageRepo = new LanguageRepoImp();
         Language language = languageRepo.getLanguageById(film.getLanguage().getId());
         System.out.println("language" + language);
         if (language == null)
-            throw new NotFoundException("Sorry But This Language did not Exist");
+            throw new HandelException("Sorry But This Language did not Exist");
         return modelMapper.map(filmRepo.updateFilm(modelMapper.map(film, Film.class)), FilmDto.class);
     }
 
-    public FilmDto getFilmByName(String title) throws NotFoundException {
+    public FilmDto getFilmByName(String title) throws HandelException {
         Film film = filmRepo.getFilmByName(title);
         if (film == null)
-            throw new NotFoundException("Sorry But This Film Out Of Store");
+            throw new HandelException("Sorry But This Film Out Of Store");
         return modelMapper.map(filmRepo.getFilmByName(title), FilmDto.class);
     }
 
@@ -87,7 +86,7 @@ public class FilmService implements FilmServicesIn {
         return actorDtos;
     }
 
-    public Set<FilmDto> getAllFilmsReleaseYear(Integer ReleaseYear) throws NotFoundException {
+    public Set<FilmDto> getAllFilmsReleaseYear(Integer ReleaseYear) throws HandelException {
         Type type = new TypeToken<Set<FilmDto>>() {
         }.getType();
         return modelMapper.map(filmRepo.getAllFimInReleaseYear(ReleaseYear), type);
