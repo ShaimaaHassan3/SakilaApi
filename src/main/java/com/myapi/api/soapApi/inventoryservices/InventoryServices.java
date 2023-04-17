@@ -1,6 +1,7 @@
 package com.myapi.api.soapApi.inventoryservices;
 
 import com.myapi.dtos.InventoryDto;
+import com.myapi.dtos.StoreDto;
 import com.myapi.dtos.film.FilmDto;
 import com.myapi.services.InventoryService;
 import jakarta.jws.WebMethod;
@@ -29,5 +30,10 @@ public class InventoryServices {
     @WebMethod(operationName = "inventories")
     public Set<InventoryDto> getAllInventory() {
         return service.getAllInventory();
+    }
+
+    @WebMethod(operationName = "store")
+    public StoreDto getStore(int inventoryId) {
+        return service.getStore(inventoryId);
     }
 }

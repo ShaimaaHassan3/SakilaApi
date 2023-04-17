@@ -1,6 +1,7 @@
 package com.myapi.persistence.repositoryImp.film;
 
 import com.myapi.persistence.entities.Inventory;
+import com.myapi.persistence.entities.Store;
 import com.myapi.persistence.entities.film.Film;
 import com.myapi.persistence.repository.film.InventoryRepo;
 import com.myapi.persistence.repositoryImp.BaseRepoImp;
@@ -22,5 +23,11 @@ public class InventoryRepoImp extends BaseRepoImp<Inventory> implements Inventor
     @Override
     public Set<Inventory> getAllInventory() {
         return getAll(new Inventory());
+    }
+
+    @Override
+    public Store getStore(int inventoryId) {
+        Inventory inventory = getInventory(inventoryId);
+        return inventory.getStore();
     }
 }

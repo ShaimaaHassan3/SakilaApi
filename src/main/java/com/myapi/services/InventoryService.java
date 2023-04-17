@@ -2,6 +2,7 @@ package com.myapi.services;
 
 import com.google.gson.reflect.TypeToken;
 import com.myapi.dtos.InventoryDto;
+import com.myapi.dtos.StoreDto;
 import com.myapi.dtos.address.AddressDto;
 import com.myapi.dtos.film.FilmDto;
 import com.myapi.persistence.repository.film.InventoryRepo;
@@ -32,5 +33,9 @@ public class InventoryService {
         Type type = new TypeToken<Set<InventoryDto>>() {
         }.getType();
         return modelMapper.map(inventoryRepo.getAllInventory(), type);
+    }
+
+    public StoreDto getStore(int inventoryId) {
+        return modelMapper.map(inventoryRepo.getStore(inventoryId), StoreDto.class);
     }
 }
