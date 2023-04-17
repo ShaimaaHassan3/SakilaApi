@@ -14,3 +14,17 @@ Content-Type: text/xml
         </jets:language>
     </soap:Body>
 </soap:Envelope>
+### Get Lanuages
+POST http://localhost:9090/SakilaApi/ws/language HTTP/1.1
+Content-Type: text/xml
+
+<soap:Envelope
+    xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+
+     xmlns:jets="http://languageservices.soapApi.api.myapi.com/">
+
+    <soap:Body>
+        <jets:languages>
+        </jets:languages>
+    </soap:Body>
+</soap:Envelope>

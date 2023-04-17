@@ -10,6 +10,8 @@ import com.myapi.persistence.repositoryImp.BaseRepoImp;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 
+import java.util.Set;
+
 public class LanguageRepoImp extends BaseRepoImp<Language> implements LanguageRepo {
     EntityManager entityManager;
 
@@ -23,5 +25,10 @@ public class LanguageRepoImp extends BaseRepoImp<Language> implements LanguageRe
         Query query = entityManager.createQuery(queryString);
         query.setParameter("languageName", languageName);
         return (Language) query.getSingleResult();
+    }
+
+    @Override
+    public Set<Language> getAllLanguage() {
+        return getAll(new Language());
     }
 }
