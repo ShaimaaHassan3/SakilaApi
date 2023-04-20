@@ -6,22 +6,31 @@ The Sakila database is often used as a sample database for learning SQL and data
 # Introduction
 This API for the Sakila Sample Database in MySQL, providing users to perform CRUD operation on any table  in the database.
 
+# Get Start
+- Download Sakila database from this link:
+(https://dev.mysql.com/doc/index-other.html)
+- For more details about the database documentation link:
+(https://dev.mysql.com/doc/sakila/en/)
+- clone this repository
+- Run the tomcat server
+- change username and password and port number in pom.xml
+- change username and password in persistence.xml
 # Technologies
 #Java
 
-#Apache Tomcat
+- Apache Tomcat
 
-#Apache Maven
+- Apache Maven
 
-#MySQL
+- MySQL
 
-#WS-API(SOAP)
+- WS-API(SOAP)
 
-#JAX-RS (Jersey)
+- JAX-RS (Jersey)
 
-#Model Mapper
+- Model Mapper
 
-#Lombok
+- Lombok
 
 #Jakarta persistance 
 
