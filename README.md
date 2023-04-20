@@ -15,9 +15,9 @@ This API for the Sakila Sample Database in MySQL, providing users to perform CRU
 
 #MySQL
 
-#WS-API(SOAP): v4.0
+#WS-API(SOAP)
 
-#JAX-RS (Jersey)API: v3.1.1 
+#JAX-RS (Jersey)
 
 #Model Mapper
 
