@@ -16,8 +16,8 @@ This API for the Sakila Sample Database in MySQL, providing users to perform CRU
 - change username and password and port number in pom.xml
 - change username and password in persistence.xml
 # Technologies
-#Java
-
+- Java
+- 
 - Apache Tomcat
 
 - Apache Maven
@@ -32,7 +32,7 @@ This API for the Sakila Sample Database in MySQL, providing users to perform CRU
 
 - Lombok
 
-#Jakarta persistance 
+- Jakarta persistance 
 
 # There is a Doucmentaion
 https://documenter.getpostman.com/view/26734861/2s93Y3uLe8
